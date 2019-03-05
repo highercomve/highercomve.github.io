@@ -26,6 +26,7 @@
     box-shadow: 0 0 1px 0 rgba(darken($blue, 40%), 60%);
     border-radius: 2px;
     margin: 0 0 2em 0;
+    cursor: pointer;
     &:before {
       content: "";
       display: block;
@@ -43,7 +44,7 @@
       height: 2px;
       width: 30px;
       position: absolute;
-      top: 48%;
+      top: calc(40% + 10px);
       left: -30px;
       background-color: $blue;
       z-index: -1;
@@ -96,6 +97,9 @@
       @include tablet {
         font-size: 1em;
       }
+    }
+    &.opened .description {
+      display: block;
     }
     .description {
       display: none;

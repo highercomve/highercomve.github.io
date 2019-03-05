@@ -114,7 +114,10 @@
       var selector = key.split(/\ (.+)/)[1]
       var cb = events[key]
       var eventFunction = function (event) {
-        if (event.target && event.target.matches(selector)) {
+        var isChildrenOf = [...this.querySelectorAll(selector)].some((element) => {
+          return element.contains(event.target)
+        })
+        if (event.target && (isChildrenOf || event.target.matches(selector))) {
           cb.call(this, ...arguments)
         }
       }
@@ -125,8 +128,7 @@
 
   function unSetEvents () {
     this.listeners.forEach((listener) => {
-      this.shadowRoot.removeEventListener(listener.type, listener.eventFunction)
-      this.removeEventListener(listener.type, listener.eventFunctio)
+      this.removeEventListener(listener.type, listener.eventFunction)
     })
   }
 

@@ -33,8 +33,8 @@ window.addEventListener('WebComponentsReady', function() {
       `
     },
     events: {
-      'click .time-line__item': function (event) {
-        event.target.classList.toggle('opened')
+      'click .time-line__item': function (event, element) {
+        event.target.closest('.time-line__item').classList.toggle('opened')
       }
     }
   }
