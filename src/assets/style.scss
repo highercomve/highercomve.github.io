@@ -37,6 +37,10 @@ p {
 
 .networks {
   display: flex;
+  justify-content: center;
+  @include tablet {
+    justify-content: flex-start;
+  }
   .network-link {
     padding: 0 1em 0 0;
     a {
@@ -94,12 +98,14 @@ p {
 
 .me-intro {
   @extend .container;
-  padding: 3em 0 5em;
+  padding: 3em 1em 5em;
   display: flex;
-  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   
   @include tablet {
-    padding: 2em 0;
+    padding: 2em 1em;
+    justify-content: flex-start;
   }
 
   .picture {
@@ -108,10 +114,10 @@ p {
     text-align: center;
     
     img {
-      width: 140px;
+      width: 180px;
       border-radius: 100%;
 
-      @include tablet { 
+      @include tablet {
         width: 200px;
       }
     }
@@ -119,7 +125,10 @@ p {
   
   .content {
     flex: 1 1 auto;
-    
+    text-align: center;
+    @include tablet {
+      text-align: left;
+    }
     h1 {
       @extend .title-main;
       margin-bottom: 0.2em;
