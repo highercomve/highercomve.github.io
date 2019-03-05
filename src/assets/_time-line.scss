@@ -26,6 +26,7 @@
     box-shadow: 0 0 1px 0 rgba(darken($blue, 40%), 60%);
     border-radius: 2px;
     margin: 0 0 2em 0;
+    transition: all 400ms ease;
     cursor: pointer;
     &:before {
       content: "";
@@ -37,6 +38,7 @@
       left: -33px;
       background-color: $blue;
       border-radius: 100%;
+      transition: all 400ms ease;
     }
     &:after {
       content: "";
@@ -48,6 +50,7 @@
       left: -30px;
       background-color: $blue;
       z-index: -1;
+      transition: all 400ms ease;
     }
     @include desktop {
       width: 50%;
@@ -99,10 +102,14 @@
       }
     }
     &.opened .description {
-      display: block;
+      opacity: 1;
+      max-height: 100vh;
     }
     .description {
-      display: none;
+      transition: all 400ms ease;
+      opacity: 0;
+      overflow: hidden;
+      max-height: 0;
     }
   }
 }

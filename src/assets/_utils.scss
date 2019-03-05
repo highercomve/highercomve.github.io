@@ -8,19 +8,19 @@ $font-open-sans: 'Open Sans', sans-serif;;
 $font-raleway: 'Raleway', sans-serif;
 
 @mixin tablet {
-  @media screen and (min-width: 576px) {
+  @media (min-width: 576px) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media screen and (min-width: 768px) {
+  @media (min-width: 768px) {
     @content;
   }
 }
 
 @mixin large {
-  @media screen and (min-width: 992px) {
+  @media (min-width: 992px) {
     @content;
   }
 }
