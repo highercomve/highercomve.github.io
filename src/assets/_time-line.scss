@@ -22,12 +22,23 @@
   }
   &__item {
     position: relative;
-    padding: 20px;
+    padding: 20px 20px 3em 20px;
     box-shadow: 0 0 1px 0 rgba(darken($blue, 40%), 60%);
     border-radius: 2px;
     margin: 0 0 2em 0;
     transition: all 400ms ease;
     cursor: pointer;
+
+    &.opened {
+      .description {
+        opacity: 1;
+        max-height: 300vh;
+      }
+      .fas {
+        transform: rotate(180deg);
+      }
+    }
+
     &:before {
       content: "";
       display: block;
@@ -101,9 +112,18 @@
         font-size: 1em;
       }
     }
-    &.opened .description {
-      opacity: 1;
-      max-height: 300vh;
+    .fas {
+      color: $blue;
+      display: block;
+      border-top: 1px solid rgba($blue, 20%);
+      border-bottom: 1px solid rgba($blue, 20%);
+      width: 100%;
+      text-align: center;
+      font-size: 1.5em;
+      transition: transform 400ms ease;
+      position: absolute;
+      left: 0;
+      bottom: 0;
     }
     .description {
       transition: all 400ms ease;

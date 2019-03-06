@@ -24,6 +24,7 @@ window.addEventListener('WebComponentsReady', function() {
       return `
         <section class="time-line__item ${type}">
           <span class="label">${item.label}</span>
+          <i class="fas fa-angle-down"></i>
           <h1 class="title">${item.title}</h1>
           <h2 class="subtitle">${item.subtitle}</h2>
           <div class="description">
