@@ -13,3 +13,17 @@ export function get (obj, path, fallback = '') {
   }
   return rest.length > 0 ? get(obj[current], rest.join('.'), fallback) : obj[current]
 }
+
+export function getGist (gist) {
+  return new Promise((resolve, reject) => {
+    fetch(`https://api.github.com/gists/${gist}`)
+      .then(response => {
+        if (response.status >= 300) {
+          import('/assets/data.json').then(resolve).catch(reject)
+          return
+        }
+        resolve(response.json())
+      })
+      .catch(reject)
+  })
+}

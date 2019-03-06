@@ -1,4 +1,5 @@
 'use strict';
+import { getGist } from '../utils'
 
 window.addEventListener('WebComponentsReady', function() {
   var Component = {
@@ -9,8 +10,7 @@ window.addEventListener('WebComponentsReady', function() {
       }
     },
     connectedCallback () {
-      fetch(`https://api.github.com/gists/${this.gist}`)
-        .then(response => response.json())
+      getGist(this.gist)
         .then(response => JSON.parse(response.files['experience.json'].content))
         .then(response => {
           this.timeline = response.items
