@@ -99,15 +99,15 @@ p {
   padding: 3em 1em 5em;
   display: flex;
   justify-content: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   
   @include tablet {
     padding: 2em 1em;
-    justify-content: flex-start;
+    justify-content: space-between;
   }
 
   .picture {
-    flex: 0 1 auto;
+    flex: 0 1 20%;
     padding-right: 1em;
     text-align: center;
     
@@ -122,7 +122,7 @@ p {
   }
   
   .content {
-    flex: 1 1 auto;
+    flex: 0 1 70%;
     text-align: center;
     @include tablet {
       text-align: left;
