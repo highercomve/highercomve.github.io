@@ -14,10 +14,23 @@ window.addEventListener('WebComponentsReady', function() {
         return this.getAttribute('gist')
       }
     },
+    getData () {
+      return new Promise((resolve, reject) => {
+        fetch(`https://api.github.com/gists/${this.gist}`)
+          .then(response => {
+            if (response.status >= 300) {
+              import('/assets/data.json').then(resolve).catch(reject)
+              return
+            }
+            resolve(response.json())
+          })
+          .catch(reject)
+      })
+    },
     connectedCallback () {
-      fetch(`https://api.github.com/gists/${this.gist}`)
-        .then(response => response.json())
+      this.getData()
         .then(response => {
+          console.log(response)
           this.html_url = response.html_url
           return JSON.parse(response.files['content.json'].content)
         })
