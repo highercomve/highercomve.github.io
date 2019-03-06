@@ -13,9 +13,12 @@
     "deploy": "yarn download && yarn build && yarn gh-pages -d dist -b master"
   },
   "devDependencies": {
+    "autoprefixer": "^9.4.10",
     "gh-pages": "^2.0.1",
     "parcel-bundler": "^1.11.0",
     "parcel-plugin-compress": "^1.0.7",
+    "postcss": "^7.0.14",
+    "postcss-modules": "^1.4.1",
     "sass": "^1.17.2"
   }
 }
