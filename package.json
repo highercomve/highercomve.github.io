@@ -14,6 +14,7 @@
   "devDependencies": {
     "gh-pages": "^2.0.1",
     "parcel-bundler": "^1.11.0",
+    "parcel-plugin-compress": "^1.0.7",
     "sass": "^1.17.2"
   }
 }
