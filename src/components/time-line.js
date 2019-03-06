@@ -3,8 +3,13 @@
 window.addEventListener('WebComponentsReady', function() {
   var Component = {
     timeline: [],
+    gist: {
+      get () {
+        return this.getAttribute('gist')
+      }
+    },
     connectedCallback () {
-      fetch('https://api.github.com/gists/31b012276a7bd488f55ca74324b9faf1')
+      fetch(`https://api.github.com/gists/${this.gist}`)
         .then(response => response.json())
         .then(response => JSON.parse(response.files['experience.json'].content))
         .then(response => {

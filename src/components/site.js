@@ -7,33 +7,42 @@ import './time-line'
 
 window.addEventListener('WebComponentsReady', function() {
   var Site = {
-    me: {},
+    html_url: null,
+    content: {},
+    gist: {
+      get () {
+        return this.getAttribute('gist')
+      }
+    },
     connectedCallback () {
-      fetch('https://api.github.com/gists/31b012276a7bd488f55ca74324b9faf1')
+      fetch(`https://api.github.com/gists/${this.gist}`)
         .then(response => response.json())
-        .then(response => JSON.parse(response.files['highercomve.json'].content))
         .then(response => {
-          this.me = response
+          this.html_url = response.html_url
+          return JSON.parse(response.files['content.json'].content)
+        })
+        .then(response => {
+          this.content = response
           this.updateComponent()
         })
     },
     render () {
-      var networks = encodeJSON(get(this, 'me.networks', []))
-      var aboutMeContent = encodeJSON(get(this, 'me.about_me.content', []))
-      var aimsContent = encodeJSON(get(this, 'me.aims.content', []))
+      var networks = encodeJSON(get(this, 'content.networks', []))
+      var aboutMeContent = encodeJSON(get(this, 'content.about_me.content', []))
+      var aimsContent = encodeJSON(get(this, 'content.aims.content', []))
       return `
         <section class="site">
           <header>
-            <me-intro name="${get(this, 'me.name')}" tagline="${get(this, 'me.tagline')}" networks="${networks}"></me-intro>
+            <me-intro name="${get(this, 'content.name')}" tagline="${get(this, 'content.tagline')}" networks="${networks}"></me-intro>
           </header>
           <section class="resume">
-            <content-section title="${get(this, 'me.about_me.title')}" wrapper="${get(this, 'me.about_me.wrapper')}" content="${aboutMeContent}"></content-section>
+            <content-section title="${get(this, 'content.about_me.title')}" wrapper="${get(this, 'content.about_me.wrapper')}" content="${aboutMeContent}"></content-section>
           </section>
           <section class="aims">
-            <content-section title="${get(this, 'me.aims.title')}" wrapper="${get(this, 'me.aims.wrapper')}" content="${aimsContent}"></content-section>
+            <content-section title="${get(this, 'content.aims.title')}" wrapper="${get(this, 'content.aims.wrapper')}" content="${aimsContent}"></content-section>
           </section>
-          <time-line></time-line>
-          <me-outro></me-outro>
+          <time-line gist="${this.gist}"></time-line>
+          <me-outro name="${get(this, 'content.name')}" url="${this.html_url}" ></me-outro>
         </section>
       `
     }

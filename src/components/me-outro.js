@@ -2,17 +2,29 @@
 
 window.addEventListener('WebComponentsReady', function() {
   var Component = {
+    name: {
+      get() {
+        return this.getAttribute('name')
+      }
+    },
+    url: {
+      get() {
+        return this.getAttribute('url')
+      }
+    },
+    year: (new Date()).getFullYear(),
+    observedAttributes () {
+      return ['name', 'url']
+    },
     render () {
       return `
         <section class="me-outro">
           <div>
-            <p>Sergio Marin - 2019</p>
             <p>
-              This site was build using web components and 
-              <a href="https://gist.github.com/highercomve/31b012276a7bd488f55ca74324b9faf1" target="_blank">
-                github gits as json storage
-              </a>
+              This site was build using vanilla JS web components without any dependency
+              and using github <a href="${this.url}" target="_blank">gist</a> to store the data as json objects
             </p>
+            <p>${this.name} - ${this.year}</p>
           </div>
         </section>
       `
