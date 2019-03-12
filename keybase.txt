@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/highercomve
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://highercomve.github.io
+  * I am highercomve (https://keybase.io/highercomve) on keybase.
+  * I have a public key ASAnsujY4rQYdPWd3BTwwIJe741absr1BKULUdO6mqEBBwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01209dad02ca06a27f54168a1565b0b0df0e6593e09a55e7b547a3266307b717b0420a",
+      "host": "keybase.io",
+      "kid": "012027b2e8d8e2b41874f59ddc14f0c0825eef8d5a6ecaf504a50b51d3ba9aa101070a",
+      "uid": "eed8b993c766301dd98f659a63036f00",
+      "username": "highercomve"
+    },
+    "merkle_root": {
+      "ctime": 1552427071,
+      "hash": "cc7481230e5d85e863aa358e4d77f6e287fcbb2a90cf5921ca139e59ee3d98216f88a4278be0f84973738dd08b7c8ef4c74285076b247b46993cbfbffddc4a16",
+      "hash_meta": "00035c01bd458ff570642b12b5348bf19c2dba76bbdf8f41cf4d3c7af15e9d27",
+      "seqno": 4934643
+    },
+    "service": {
+      "entropy": "ZMQm8cEkWdX3tqwUudsrZFWe",
+      "hostname": "highercomve.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "3.1.2"
+  },
+  "ctime": 1552427092,
+  "expire_in": 504576000,
+  "prev": "6cdb072c22bbc5de5a5f24cfdc190247486632a55cf77c14f18576dc10cd9ba5",
+  "seqno": 44,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgJ7Lo2OK0GHT1ndwU8MCCXu+NWm7K9QSlC1HTupqhAQcKp3BheWxvYWTESpcCLMQgbNsHLCK7xd5aXyTP3BkCR0hmMqVc93wU8YV23BDNm6XEIEaMcvDQQOECQK2ELT0fAeCqTGQvAgkGXWk/ZUpr8Cc5AgHCo3NpZ8RA1gFHlFT+v+ZKvSZMxbjUXDe4P0KoKEz/UFsanp1wU+C83hGv9Bu+LFm5mboUc5M+F15LuLDVJCwvxTd7hWJnDqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIO4UDWvNCrnunFRsTbilONuTn5JciFjm7MNmzhOoj32Yo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/highercomve
+
+==================================================================
