@@ -9,7 +9,7 @@
   "scripts": {
     "start": "rm -rf dist && parcel src/index.html",
     "build": "rm -rf dist && parcel build src/index.html && yarn copy-keybase",
-    "copy-keybase": "cp src/keybase.txt dist/keybase.txt",
+    "copy-keybase": "cp src/keybase.txt dist/keybase.txt && mkdir dist/.well-known && cp src/keybase.txt dist/.well-known/keybase.txt",
     "download": "curl https://api.github.com/gists/31b012276a7bd488f55ca74324b9faf1 > src/assets/data.json",
     "deploy": "yarn download && yarn build && yarn gh-pages -d dist -b master"
   },
