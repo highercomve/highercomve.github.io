@@ -12,25 +12,25 @@
       "filename": "content.json",
       "type": "application/json",
       "language": "JSON",
-      "raw_url": "https://gist.githubusercontent.com/highercomve/31b012276a7bd488f55ca74324b9faf1/raw/4ff44c6c464e0358f744f1702ea6818fede7f599/content.json",
-      "size": 2266,
+      "raw_url": "https://gist.githubusercontent.com/highercomve/31b012276a7bd488f55ca74324b9faf1/raw/d0423b491dbc373e9744d13ea2d08b3137f20a17/content.json",
+      "size": 2268,
       "truncated": false,
-      "content": "{\n  \"name\": \"Sergio Marin\",\n  \"nick_name\": \"highercomve\",\n  \"tagline\": \"I'm a software engineer focused on web applications\",\n  \"location\": \"Santiago, Chile\",\n  \"networks\": [\n    {\n      \"title\": \"Sergio Marin's Github page\",\n      \"url\": \"https://github.com/highercomve\",\n      \"icon\": \"github\"\n    },\n    {\n      \"title\": \"Sergio Marin's LinkedIn page\",\n      \"url\": \"https://www.linkedin.com/in/highercomve/\",\n      \"icon\": \"linkedin-in\"\n    },\n    {\n      \"title\": \"Sergio Marin's Medium blog\",\n      \"url\": \"https://medium.com/@highercomve\",\n      \"icon\": \"medium\"\n    },\n    {\n      \"title\": \"Sergio Marin's Twitter\",\n      \"url\": \"https://twitter.com/highercomve\",\n      \"icon\": \"twitter\"\n    }\n  ],\n  \"about_me\": {\n    \"title\": \"\",\n    \"content\": [\n      \"I discovered my passion for programming and the web about fourteen years ago by “hacking” (which was the perception of was I was doing at the time) the opensource code for an MU web server written in PHP (the MMORPG game).\",\n      \"Since that moment I have been passioned about web development, creating applications that could help others to solve their problems. For me the web platform allows us to be creative and innovative and at the same time giving all the freedom to the user, they can run software inside their browsers without any installation, limitation of OS (desktop or mobile). And these applications could bring real value to the users.\",\n      \"I had worked in different places of the web platform: building APIs, front-end applications, server rendered apps, processing data, connecting the user to third parties,  connecting hardware to APIs, and others. Learning every day something new and trying new things because the web platform is always growing and changing.\"\n    ],\n    \"wrapper\": \"p\"\n  },\n  \"aims\": {\n    \"title\": \"My aims?\",\n    \"content\": [\n      \"Learning new things and have fun while doing it.\",\n      \"I always try to exert myself and gain a new perspective on how to create apps.\",\n      \"Last but not least, I enjoy teaching others, as well as learning and finding solutions as a team. Working with others to create solutions that follow a certain set of rules. Producing knowledge that can be transferred to subsequent teams.\"\n    ],\n    \"wrapper\": \"li\"\n  }\n}"
+      "content": "{\n  \"name\": \"Sergio Marin\",\n  \"nick_name\": \"highercomve\",\n  \"tagline\": \"I'm a software engineer focused on web applications\",\n  \"location\": \"Santiago, Chile\",\n  \"networks\": [\n    {\n      \"title\": \"Sergio Marin's Github page\",\n      \"url\": \"https://github.com/highercomve\",\n      \"icon\": \"github\"\n    },\n    {\n      \"title\": \"Sergio Marin's LinkedIn page\",\n      \"url\": \"https://www.linkedin.com/in/highercomve/\",\n      \"icon\": \"linkedin-in\"\n    },\n    {\n      \"title\": \"Sergio Marin's Medium blog\",\n      \"url\": \"https://medium.com/@highercomve\",\n      \"icon\": \"medium\"\n    },\n    {\n      \"title\": \"Sergio Marin's Twitter\",\n      \"url\": \"https://twitter.com/highercomve\",\n      \"icon\": \"twitter\"\n    }\n  ],\n  \"about_me\": {\n    \"title\": \"\",\n    \"content\": [\n      \"I discovered my passion for programming and the web about fourteen years ago by “hacking” (which was the perception of what I was doing at the time) the opensource code for an MU web server written in PHP (the MMORPG game).\",\n      \"Since that moment I have been passionate about web development, creating applications that could help others to solve their problems. For me the web platform allows us to be creative and innovative and at the same time giving all the freedom to the user, they can run software inside their browsers without any installation, limitation of OS (desktop or mobile). And these applications could bring real value to the users.\",\n      \"I had worked in different places of the web platform: building APIs, front-end applications, server rendered apps, processing data, connecting the user to third parties,  connecting hardware to APIs, and others. Learning something new every day and trying new things because the web platform is always growing and changing.\"\n    ],\n    \"wrapper\": \"p\"\n  },\n  \"aims\": {\n    \"title\": \"My aims?\",\n    \"content\": [\n      \"Learning new things and have fun while doing it.\",\n      \"I always try to exert myself and gain a new perspective on how to create apps.\",\n      \"Last but not least, I enjoy teaching others, as well as learning and finding solutions as a team. Working with others to create solutions that follow a certain set of rules. Producing knowledge that can be transferred to subsequent teams.\"\n    ],\n    \"wrapper\": \"li\"\n  }\n}"
     },
     "experience.json": {
       "filename": "experience.json",
       "type": "application/json",
       "language": "JSON",
-      "raw_url": "https://gist.githubusercontent.com/highercomve/31b012276a7bd488f55ca74324b9faf1/raw/108f96ef14a7fd29c79b3569ec6def9262e980a5/experience.json",
-      "size": 4475,
+      "raw_url": "https://gist.githubusercontent.com/highercomve/31b012276a7bd488f55ca74324b9faf1/raw/8b80b5928336f6e0e7ee957265d4224a43668fcc/experience.json",
+      "size": 5874,
       "truncated": false,
-      "content": "{\n  \"items\": [\n    {\n      \"title\": \"Technical Lead - uBiome\",\n      \"label\": \"October 2018 - January 2019\",\n      \"subtitle\": \"ubiome.com - Product Team\",\n      \"description\": [\n        \"As Technical Lead for the product team, I lead the creation and implementation of a new set of tools and rules for several applications.\",\n        \"Creating an ecosystem for the company to allow the frontend team to move faster and scale better. Building libraries and components for our Vue.js applications, a general configuration, and tools to allow developers to do TDD in an easy way, CI integrations, tracking application performance, A/B testing.\",\n        \"Two achievements at uBiome were lead the migration from meteor to Vue.js in 5 applications and accomplish to reduce our application load time from 30 seconds to 5 seconds after a performance review of our applications done by me.\"\n      ]\n    },\n    {\n      \"title\": \"Senior Software Engineer - uBiome\",\n      \"label\": \"June 2017 - October 2018\",\n      \"subtitle\": \"ubiome.com - Product Team\",\n      \"description\": [\n        \"I was part of the product team as a frontend developer, we maintain and create all the applications used for patients and doctor to interact with our products. Starting requesting a kit for the study and ends with the visualization of results and reports.\",\n        \"I was in charge of creating a culture and infrastructure to build our applications using TDD as a common practice, for this matter I give several internal presentations about TDD with Vue.js. And I set up all the pipeline to run the test suit in our CI (Drone), integrate that with our Repositories and set the rules to allow merging new features only if the test pass.\"\n      ]\n    },\n    {\n      \"title\": \"Senior Software Engineer - Payfully\",\n      \"label\": \"June 2016 - May 2017\",\n      \"subtitle\": \"payfully.co\",\n      \"description\": [\n        \"I was the first contracted developer after the CTO did the first MVP of the application, therefore together we build all the bases for the whole company. After I was in charge of training all the new developer in the company and I built the infrastructure of microservices with Amazon Lambda and Node.js, creating a Yeoman template for our new services adding to all the tools that we were using as Typescript, Mocha, Mocks of other services, Mocks for Amazon SQS.\",\n        \"I was the lead developer on the creation of the new React applications (web, mobile -React native- and the administration platform), setting al the rules and tools that the team was gonna in the building process and creating all the base code base for those applications (all the basic features that we already got in the previous applications).\"\n      ]\n    },\n    {\n      \"title\": \"Software Developer - Retiqueta\",\n      \"label\": \"2015 - 2016\",\n      \"subtitle\": \"retiqueta.com - Ruby and Javascript\",\n      \"description\": [\n        \"My main responsibility was to build the mobile application with Ionic, but also working on the API with RoR. The application has features such as push notifications, camera usage, in-app payments, and other features to create the best experience to sell and buy second-hand clothing and accessories. We use docker and Kubernetes to build our architecture over Google Cloud Container Engine and orchestrate that container cluster. All this with continuous integration and testing in our API, and also testing in the mobile app with Calabash (http://calaba.sh/) and Cucumber.\"\n      ]\n    },\n    {\n      \"title\": \"Technical Lead - Escuelaweb\",\n      \"label\": \"2009 - 2015\",\n      \"subtitle\": \"escuelaweb.net - Ruby on Rails\",\n      \"description\": [\n        \"I was the technical lead in charge of all the system, infrastructure, server, services, integrations and lead other developers in the company.\",\n        \"Escuelaweb.net has a platform where students can take exams, read class materials, receive job offers, etc. The user participates in live classes, where student and teacher interact via video, audio, chat, files and more.\",\n        \"My biggest accomplish here as Senior Engineer here was the opportunity to meet awesome developers wich thanks to all what they learn in escuelaweb as part of the development team, they got the chance to have an incredible growth as developer leading them to find a job abroad Venezuela and have a better life. And until now they always thank me for that and the job I made as their leader in escuelaweb.\"\n      ]\n    }\n  ]\n}"
+      "content": "{\n  \"items\": [\n    {\n      \"title\": \"Senior Software Engineer - Pantacor\",\n      \"label\": \"March 2019 - Today\",\n      \"subtitle\": \"pantahub.com\",\n      \"description\": [\n        \"I'm part of the team building pantahub platform, an opensource project to manage software and firmware for Edge Services for Linux devices.\",\n        \"Giving existing Linux-based device deployments a second life through new value-add services, and a comprehensive management and deployment story through open source technologies is the key to this new computing revolution.\",\n        \"I have been working on the CLI tools,  web services, web applications. The CLI tools and web services are built with golang and the web applications are built with Javascript using React as a framework.\",\n        \"One of the most challenging projects was I got the change to participate in the implementation of a system to create an automatic flow for device registration and assignation of ownership using the TPM attestation protocol. We are building the ACA server and implementing the ownership base on certificates on pantahub.\"\n      ]\n    },\n    {\n      \"title\": \"Technical Lead - uBiome\",\n      \"label\": \"October 2018 - January 2019\",\n      \"subtitle\": \"ubiome.com - Product Team\",\n      \"description\": [\n        \"As Technical Lead for the product team, I lead the creation and implementation of a new set of tools and rules for several applications.\",\n        \"Creating an ecosystem for the company to allow the frontend team to move faster and scale better. Building libraries and components for our Vue.js applications, a general configuration, and tools to allow developers to do TDD in an easy way, CI integrations, tracking application performance, A/B testing.\",\n        \"Two achievements at uBiome were lead the migration from meteor to Vue.js in 5 applications and accomplish to reduce our application load time from 30 seconds to 5 seconds after a performance review of our applications done by me.\"\n      ]\n    },\n    {\n      \"title\": \"Senior Software Engineer - uBiome\",\n      \"label\": \"June 2017 - October 2018\",\n      \"subtitle\": \"ubiome.com - Product Team\",\n      \"description\": [\n        \"I was part of the product team as a frontend developer, we maintain and create all the applications used for patients and doctor to interact with our products. Starting requesting a kit for the study and ends with the visualization of results and reports.\",\n        \"I was in charge of creating a culture and infrastructure to build our applications using TDD as a common practice, for this matter I give several internal presentations about TDD with Vue.js. And I set up all the pipeline to run the test suit in our CI (Drone), integrate that with our Repositories and set the rules to allow merging new features only if the test pass.\"\n      ]\n    },\n    {\n      \"title\": \"Senior Software Engineer - Payfully\",\n      \"label\": \"June 2016 - May 2017\",\n      \"subtitle\": \"payfully.co\",\n      \"description\": [\n        \"I was the first contracted developer after the CTO did the first MVP of the application, therefore together we build all the bases for the whole company. After I was in charge of training all the new developer in the company and I built the infrastructure of microservices with Amazon Lambda and Node.js, creating a Yeoman template for our new services adding to all the tools that we were using as Typescript, Mocha, Mocks of other services, Mocks for Amazon SQS.\",\n        \"I was the lead developer on the creation of the new React applications (web, mobile -React native- and the administration platform), setting al the rules and tools that the team was gonna in the building process and creating all the base code base for those applications (all the basic features that we already got in the previous applications).\"\n      ]\n    },\n    {\n      \"title\": \"Software Developer - Retiqueta\",\n      \"label\": \"2015 - 2016\",\n      \"subtitle\": \"retiqueta.com - Ruby and Javascript\",\n      \"description\": [\n        \"My main responsibility was to build the mobile application with Ionic, but also working on the API with RoR. The application has features such as push notifications, camera usage, in-app payments, and other features to create the best experience to sell and buy second-hand clothing and accessories. We use docker and Kubernetes to build our architecture over Google Cloud Container Engine and orchestrate that container cluster. All this with continuous integration and testing in our API, and also testing in the mobile app with Calabash (http://calaba.sh/) and Cucumber.\"\n      ]\n    },\n    {\n      \"title\": \"Technical Lead - Escuelaweb\",\n      \"label\": \"2009 - 2015\",\n      \"subtitle\": \"escuelaweb.net - Ruby on Rails\",\n      \"description\": [\n        \"I was the technical lead in charge of all the system, infrastructure, server, services, integrations and lead other developers in the company.\",\n        \"Escuelaweb.net has a platform where students can take exams, read class materials, receive job offers, etc. The user participates in live classes, where student and teacher interact via video, audio, chat, files and more.\",\n        \"My biggest accomplish here as Senior Engineer here was the opportunity to meet awesome developers wich thanks to all what they learn in escuelaweb as part of the development team, they got the chance to have an incredible growth as developer leading them to find a job abroad Venezuela and have a better life. And until now they always thank me for that and the job I made as their leader in escuelaweb.\"\n      ]\n    },\n    {\n      \"title\": \"Software Engineer - Pixel Studios\",\n      \"label\": \"2007 - 2019\",\n      \"subtitle\": \"PixelStudios\",\n      \"description\": [\n        \"Pixel Studio was building wep applications and web solutuons to several clients. using PHP, JavaScript, Wordpress and other tools.\"\n      ]\n    }\n  ]\n}"
     }
   },
   "public": true,
   "created_at": "2019-03-04T16:28:04Z",
-  "updated_at": "2019-03-06T16:27:46Z",
-  "description": "",
+  "updated_at": "2020-02-27T21:20:37Z",
+  "description": "highercomve.github.io content managment",
   "comments": 0,
   "user": null,
   "comments_url": "https://api.github.com/gists/31b012276a7bd488f55ca74324b9faf1/comments",
@@ -58,6 +58,276 @@
 
   ],
   "history": [
+    {
+      "user": {
+        "login": "highercomve",
+        "id": 1034621,
+        "node_id": "MDQ6VXNlcjEwMzQ2MjE=",
+        "avatar_url": "https://avatars1.githubusercontent.com/u/1034621?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/highercomve",
+        "html_url": "https://github.com/highercomve",
+        "followers_url": "https://api.github.com/users/highercomve/followers",
+        "following_url": "https://api.github.com/users/highercomve/following{/other_user}",
+        "gists_url": "https://api.github.com/users/highercomve/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/highercomve/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/highercomve/subscriptions",
+        "organizations_url": "https://api.github.com/users/highercomve/orgs",
+        "repos_url": "https://api.github.com/users/highercomve/repos",
+        "events_url": "https://api.github.com/users/highercomve/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/highercomve/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "version": "65fc590e1a1abf90794f767c5d751cb3ad77e22d",
+      "committed_at": "2020-02-27T21:20:36Z",
+      "change_status": {
+        "total": 2,
+        "additions": 1,
+        "deletions": 1
+      },
+      "url": "https://api.github.com/gists/31b012276a7bd488f55ca74324b9faf1/65fc590e1a1abf90794f767c5d751cb3ad77e22d"
+    },
+    {
+      "user": {
+        "login": "highercomve",
+        "id": 1034621,
+        "node_id": "MDQ6VXNlcjEwMzQ2MjE=",
+        "avatar_url": "https://avatars1.githubusercontent.com/u/1034621?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/highercomve",
+        "html_url": "https://github.com/highercomve",
+        "followers_url": "https://api.github.com/users/highercomve/followers",
+        "following_url": "https://api.github.com/users/highercomve/following{/other_user}",
+        "gists_url": "https://api.github.com/users/highercomve/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/highercomve/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/highercomve/subscriptions",
+        "organizations_url": "https://api.github.com/users/highercomve/orgs",
+        "repos_url": "https://api.github.com/users/highercomve/repos",
+        "events_url": "https://api.github.com/users/highercomve/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/highercomve/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "version": "df975200dc562395781683e69a6ebeecadc7f128",
+      "committed_at": "2020-02-27T21:16:59Z",
+      "change_status": {
+        "total": 8,
+        "additions": 4,
+        "deletions": 4
+      },
+      "url": "https://api.github.com/gists/31b012276a7bd488f55ca74324b9faf1/df975200dc562395781683e69a6ebeecadc7f128"
+    },
+    {
+      "user": {
+        "login": "highercomve",
+        "id": 1034621,
+        "node_id": "MDQ6VXNlcjEwMzQ2MjE=",
+        "avatar_url": "https://avatars1.githubusercontent.com/u/1034621?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/highercomve",
+        "html_url": "https://github.com/highercomve",
+        "followers_url": "https://api.github.com/users/highercomve/followers",
+        "following_url": "https://api.github.com/users/highercomve/following{/other_user}",
+        "gists_url": "https://api.github.com/users/highercomve/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/highercomve/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/highercomve/subscriptions",
+        "organizations_url": "https://api.github.com/users/highercomve/orgs",
+        "repos_url": "https://api.github.com/users/highercomve/repos",
+        "events_url": "https://api.github.com/users/highercomve/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/highercomve/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "version": "4349c8271e8e8a8bbd6481c6bf16f48e785e610d",
+      "committed_at": "2019-11-06T13:26:22Z",
+      "change_status": {
+        "total": 6,
+        "additions": 3,
+        "deletions": 3
+      },
+      "url": "https://api.github.com/gists/31b012276a7bd488f55ca74324b9faf1/4349c8271e8e8a8bbd6481c6bf16f48e785e610d"
+    },
+    {
+      "user": {
+        "login": "highercomve",
+        "id": 1034621,
+        "node_id": "MDQ6VXNlcjEwMzQ2MjE=",
+        "avatar_url": "https://avatars1.githubusercontent.com/u/1034621?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/highercomve",
+        "html_url": "https://github.com/highercomve",
+        "followers_url": "https://api.github.com/users/highercomve/followers",
+        "following_url": "https://api.github.com/users/highercomve/following{/other_user}",
+        "gists_url": "https://api.github.com/users/highercomve/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/highercomve/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/highercomve/subscriptions",
+        "organizations_url": "https://api.github.com/users/highercomve/orgs",
+        "repos_url": "https://api.github.com/users/highercomve/repos",
+        "events_url": "https://api.github.com/users/highercomve/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/highercomve/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "version": "3483df0a6ca83a9a77624c730c1c04f32df592e2",
+      "committed_at": "2019-10-25T21:46:28Z",
+      "change_status": {
+        "total": 0,
+        "additions": 0,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/31b012276a7bd488f55ca74324b9faf1/3483df0a6ca83a9a77624c730c1c04f32df592e2"
+    },
+    {
+      "user": {
+        "login": "highercomve",
+        "id": 1034621,
+        "node_id": "MDQ6VXNlcjEwMzQ2MjE=",
+        "avatar_url": "https://avatars1.githubusercontent.com/u/1034621?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/highercomve",
+        "html_url": "https://github.com/highercomve",
+        "followers_url": "https://api.github.com/users/highercomve/followers",
+        "following_url": "https://api.github.com/users/highercomve/following{/other_user}",
+        "gists_url": "https://api.github.com/users/highercomve/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/highercomve/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/highercomve/subscriptions",
+        "organizations_url": "https://api.github.com/users/highercomve/orgs",
+        "repos_url": "https://api.github.com/users/highercomve/repos",
+        "events_url": "https://api.github.com/users/highercomve/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/highercomve/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "version": "06da8e72cd44a94dbc98316b487ddb1c3ac61508",
+      "committed_at": "2019-10-25T21:45:41Z",
+      "change_status": {
+        "total": 4,
+        "additions": 2,
+        "deletions": 2
+      },
+      "url": "https://api.github.com/gists/31b012276a7bd488f55ca74324b9faf1/06da8e72cd44a94dbc98316b487ddb1c3ac61508"
+    },
+    {
+      "user": {
+        "login": "highercomve",
+        "id": 1034621,
+        "node_id": "MDQ6VXNlcjEwMzQ2MjE=",
+        "avatar_url": "https://avatars1.githubusercontent.com/u/1034621?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/highercomve",
+        "html_url": "https://github.com/highercomve",
+        "followers_url": "https://api.github.com/users/highercomve/followers",
+        "following_url": "https://api.github.com/users/highercomve/following{/other_user}",
+        "gists_url": "https://api.github.com/users/highercomve/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/highercomve/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/highercomve/subscriptions",
+        "organizations_url": "https://api.github.com/users/highercomve/orgs",
+        "repos_url": "https://api.github.com/users/highercomve/repos",
+        "events_url": "https://api.github.com/users/highercomve/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/highercomve/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "version": "575d0942b7fc2b81c35e827ed3147487c3e55d5b",
+      "committed_at": "2019-10-25T21:44:54Z",
+      "change_status": {
+        "total": 6,
+        "additions": 4,
+        "deletions": 2
+      },
+      "url": "https://api.github.com/gists/31b012276a7bd488f55ca74324b9faf1/575d0942b7fc2b81c35e827ed3147487c3e55d5b"
+    },
+    {
+      "user": {
+        "login": "highercomve",
+        "id": 1034621,
+        "node_id": "MDQ6VXNlcjEwMzQ2MjE=",
+        "avatar_url": "https://avatars1.githubusercontent.com/u/1034621?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/highercomve",
+        "html_url": "https://github.com/highercomve",
+        "followers_url": "https://api.github.com/users/highercomve/followers",
+        "following_url": "https://api.github.com/users/highercomve/following{/other_user}",
+        "gists_url": "https://api.github.com/users/highercomve/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/highercomve/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/highercomve/subscriptions",
+        "organizations_url": "https://api.github.com/users/highercomve/orgs",
+        "repos_url": "https://api.github.com/users/highercomve/repos",
+        "events_url": "https://api.github.com/users/highercomve/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/highercomve/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "version": "7d454950cd9bb5e50a0dc793312f115a917340af",
+      "committed_at": "2019-05-05T21:46:32Z",
+      "change_status": {
+        "total": 2,
+        "additions": 1,
+        "deletions": 1
+      },
+      "url": "https://api.github.com/gists/31b012276a7bd488f55ca74324b9faf1/7d454950cd9bb5e50a0dc793312f115a917340af"
+    },
+    {
+      "user": {
+        "login": "highercomve",
+        "id": 1034621,
+        "node_id": "MDQ6VXNlcjEwMzQ2MjE=",
+        "avatar_url": "https://avatars1.githubusercontent.com/u/1034621?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/highercomve",
+        "html_url": "https://github.com/highercomve",
+        "followers_url": "https://api.github.com/users/highercomve/followers",
+        "following_url": "https://api.github.com/users/highercomve/following{/other_user}",
+        "gists_url": "https://api.github.com/users/highercomve/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/highercomve/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/highercomve/subscriptions",
+        "organizations_url": "https://api.github.com/users/highercomve/orgs",
+        "repos_url": "https://api.github.com/users/highercomve/repos",
+        "events_url": "https://api.github.com/users/highercomve/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/highercomve/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "version": "1e993c6091ea5aca3a3b279f361368dbe3ba88cd",
+      "committed_at": "2019-05-05T21:45:45Z",
+      "change_status": {
+        "total": 8,
+        "additions": 8,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/31b012276a7bd488f55ca74324b9faf1/1e993c6091ea5aca3a3b279f361368dbe3ba88cd"
+    },
+    {
+      "user": {
+        "login": "highercomve",
+        "id": 1034621,
+        "node_id": "MDQ6VXNlcjEwMzQ2MjE=",
+        "avatar_url": "https://avatars1.githubusercontent.com/u/1034621?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/highercomve",
+        "html_url": "https://github.com/highercomve",
+        "followers_url": "https://api.github.com/users/highercomve/followers",
+        "following_url": "https://api.github.com/users/highercomve/following{/other_user}",
+        "gists_url": "https://api.github.com/users/highercomve/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/highercomve/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/highercomve/subscriptions",
+        "organizations_url": "https://api.github.com/users/highercomve/orgs",
+        "repos_url": "https://api.github.com/users/highercomve/repos",
+        "events_url": "https://api.github.com/users/highercomve/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/highercomve/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "version": "5dc5203de14238031afa54b709093d3122ecc3b4",
+      "committed_at": "2019-03-21T14:56:39Z",
+      "change_status": {
+        "total": 9,
+        "additions": 9,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/31b012276a7bd488f55ca74324b9faf1/5dc5203de14238031afa54b709093d3122ecc3b4"
+    },
     {
       "user": {
         "login": "highercomve",
@@ -112,9 +382,7 @@
       "version": "95ac6cdef2d984c5e7a73b6ab8e4120e7bb221ab",
       "committed_at": "2019-03-06T09:47:50Z",
       "change_status": {
-        "total": 0,
-        "additions": 0,
-        "deletions": 0
+
       },
       "url": "https://api.github.com/gists/31b012276a7bd488f55ca74324b9faf1/95ac6cdef2d984c5e7a73b6ab8e4120e7bb221ab"
     },
@@ -142,9 +410,7 @@
       "version": "521758b8c6dfc0ebc6e2fdb9d6630c49e9831199",
       "committed_at": "2019-03-06T02:27:42Z",
       "change_status": {
-        "total": 2,
-        "additions": 1,
-        "deletions": 1
+
       },
       "url": "https://api.github.com/gists/31b012276a7bd488f55ca74324b9faf1/521758b8c6dfc0ebc6e2fdb9d6630c49e9831199"
     },
@@ -172,9 +438,7 @@
       "version": "af9a955631adb2dbbbd65137512fd1e81ef995a7",
       "committed_at": "2019-03-06T02:26:30Z",
       "change_status": {
-        "total": 2,
-        "additions": 1,
-        "deletions": 1
+
       },
       "url": "https://api.github.com/gists/31b012276a7bd488f55ca74324b9faf1/af9a955631adb2dbbbd65137512fd1e81ef995a7"
     },
@@ -202,9 +466,7 @@
       "version": "385fc8d05e31de110c33a9139a98e4bf75dcfa0c",
       "committed_at": "2019-03-06T01:20:06Z",
       "change_status": {
-        "total": 2,
-        "additions": 1,
-        "deletions": 1
+
       },
       "url": "https://api.github.com/gists/31b012276a7bd488f55ca74324b9faf1/385fc8d05e31de110c33a9139a98e4bf75dcfa0c"
     },
@@ -232,9 +494,7 @@
       "version": "63e8d6aa61c460328469dde7916cd082ddec1e22",
       "committed_at": "2019-03-05T23:19:48Z",
       "change_status": {
-        "total": 6,
-        "additions": 3,
-        "deletions": 3
+
       },
       "url": "https://api.github.com/gists/31b012276a7bd488f55ca74324b9faf1/63e8d6aa61c460328469dde7916cd082ddec1e22"
     },
@@ -262,9 +522,7 @@
       "version": "6b47631bee9e419da92364511680170bcf716d0e",
       "committed_at": "2019-03-05T22:26:52Z",
       "change_status": {
-        "total": 2,
-        "additions": 1,
-        "deletions": 1
+
       },
       "url": "https://api.github.com/gists/31b012276a7bd488f55ca74324b9faf1/6b47631bee9e419da92364511680170bcf716d0e"
     },
@@ -292,9 +550,7 @@
       "version": "a518dafdc377897accffa39895981f8a178698f0",
       "committed_at": "2019-03-05T22:17:37Z",
       "change_status": {
-        "total": 5,
-        "additions": 5,
-        "deletions": 0
+
       },
       "url": "https://api.github.com/gists/31b012276a7bd488f55ca74324b9faf1/a518dafdc377897accffa39895981f8a178698f0"
     },
@@ -322,9 +578,7 @@
       "version": "992e7db08c9740e8b67d437e8894327a7cdbdc07",
       "committed_at": "2019-03-05T19:35:32Z",
       "change_status": {
-        "total": 38,
-        "additions": 37,
-        "deletions": 1
+
       },
       "url": "https://api.github.com/gists/31b012276a7bd488f55ca74324b9faf1/992e7db08c9740e8b67d437e8894327a7cdbdc07"
     },
@@ -352,9 +606,7 @@
       "version": "c7c52c66768f8ea8753831d172461ce8487fcea2",
       "committed_at": "2019-03-05T18:58:40Z",
       "change_status": {
-        "total": 11,
-        "additions": 10,
-        "deletions": 1
+
       },
       "url": "https://api.github.com/gists/31b012276a7bd488f55ca74324b9faf1/c7c52c66768f8ea8753831d172461ce8487fcea2"
     },
