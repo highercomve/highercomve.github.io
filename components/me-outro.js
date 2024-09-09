@@ -1,23 +1,21 @@
-'use strict';
-
-window.addEventListener('WebComponentsReady', function() {
-  var Component = {
-    name: {
-      get() {
-        return this.getAttribute('name')
-      }
-    },
-    url: {
-      get() {
-        return this.getAttribute('url')
-      }
-    },
-    year: (new Date()).getFullYear(),
-    observedAttributes () {
-      return ['name', 'url']
-    },
-    render () {
-      return `
+window.addEventListener("WebComponentsReady", function () {
+	var Component = {
+		name: {
+			get() {
+				return this.getAttribute("name");
+			},
+		},
+		url: {
+			get() {
+				return this.getAttribute("url");
+			},
+		},
+		year: new Date().getFullYear(),
+		observedAttributes() {
+			return ["name", "url"];
+		},
+		render() {
+			return `
         <section class="me-outro">
           <div>
             <p>
@@ -30,11 +28,10 @@ window.addEventListener('WebComponentsReady', function() {
             <p>${this.name} - ${this.year}</p>
           </div>
         </section>
-      `
-    }
-  }
-  import('../component-builder.js')
-    .then(function () {
-      CreateComponent('me-outro', Component)
-    })
-})
+      `;
+		},
+	};
+	import("../components/component-builder.js").then(function () {
+		CreateComponent("me-outro", Component);
+	});
+});
