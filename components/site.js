@@ -3,6 +3,7 @@ import "./me-intro.js";
 import "./me-outro.js";
 import "./content-section.js";
 import "./time-line.js";
+import "./articles.js";
 
 window.addEventListener("WebComponentsReady", function () {
 	var Site = {
@@ -32,17 +33,18 @@ window.addEventListener("WebComponentsReady", function () {
 			var aimsContent = encodeJSON(get(this, "content.aims.content", []));
 			return `
         <section class="site">
-          <header>
-            <me-intro name="${get(this, "content.name")}" tagline="${get(this, "content.tagline")}" networks="${networks}"></me-intro>
-          </header>
-          <section class="resume">
-            <content-section title="${get(this, "content.about_me.title")}" wrapper="${get(this, "content.about_me.wrapper")}" content="${aboutMeContent}"></content-section>
-          </section>
-          <section class="aims">
-            <content-section title="${get(this, "content.aims.title")}" wrapper="${get(this, "content.aims.wrapper")}" content="${aimsContent}"></content-section>
-          </section>
-          <time-line gist="${this.gist}"></time-line>
-          <me-outro name="${get(this, "content.name")}" url="${this.html_url}" ></me-outro>
+			<header>
+				<me-intro name="${get(this, "content.name")}" tagline="${get(this, "content.tagline")}" networks="${networks}"></me-intro>
+			</header>
+			<section class="resume">
+				<content-section title="${get(this, "content.about_me.title")}" wrapper="${get(this, "content.about_me.wrapper")}" content="${aboutMeContent}"></content-section>
+			</section>
+			<section class="aims">
+				<content-section title="${get(this, "content.aims.title")}" wrapper="${get(this, "content.aims.wrapper")}" content="${aimsContent}"></content-section>
+			</section>
+			<time-line gist="${this.gist}"></time-line>
+			<latest-articles></latest-articles>
+          	<me-outro name="${get(this, "content.name")}" url="${this.html_url}" ></me-outro>
         </section>
       `;
 		},

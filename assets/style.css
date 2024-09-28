@@ -2,7 +2,8 @@
 .content-section,
 .me-intro,
 .me-outro > div,
-.time-line {
+.time-line,
+.articles {
 	max-width: 768px;
 	margin: 0 auto;
 	width: 100%;
@@ -332,4 +333,30 @@ p {
 	#main {
 		padding: 0 1em;
 	}
+}
+
+.articles-outer {
+	padding: 2em 1em 4em;
+    border-top: 4px solid #3f9fdb;
+}
+.articles header {
+	margin-left: 0;
+	padding-left: 0;;
+}
+
+.articles h4 {
+	font-size: 1.6em;
+}
+.articles .article h5 {
+	margin-bottom: 0;
+}
+.articles .article h5 a {
+	font-size: 1.3em;
+	color: grey;
+	font-weight: normal;
+}
+
+.articles .article p {
+	margin-top: 0;
+	font-size: 0.8em;
 }
