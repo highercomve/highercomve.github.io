@@ -393,3 +393,27 @@ p {
 	border-radius: 3px;
 	margin-right: 0.5em;
 }
+
+.articles .article p.article-categories {
+	margin-top: 0.5em;
+	font-size: 0.9em;
+	color: #646464;
+}
+
+.articles .article p.article-categories .categories-tag {
+	font-weight: bold;
+	color: #fff;
+	background-color: #3f9fdb;
+	padding: 0.2em 0.5em;
+	border-radius: 3px;
+	margin-right: 0.5em;
+}
+
+.articles .article p.article-categories span.category {
+	display: inline-block;
+	background-color: #e0e0e0;
+	color: #333;
+	padding: 0.2em 0.5em;
+	border-radius: 3px;
+	margin-right: 0.5em;
+}

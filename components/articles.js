@@ -37,14 +37,21 @@ window.addEventListener("WebComponentsReady", function () {
 				"",
 			);
 
+			const categories = article.categories
+				.map((category) => `<span class="category">${category}</span>`)
+				.join(" ");
+
 			return `
 			<section class="article">
 				<header>
-								<h5><a href="${article.link}" target="_blank">${article.title}</a></h5>
+					<h5><a href="${article.link}" target="_blank">${article.title}</a></h5>
 				</header>
 				<p class="publish-date"><span class="publish-tag">Published on:</span> ${article.pubDate.split(" ")[0]}</p>
 				<p class="article-description">
 					${plainTextDescription}
+				</p>
+				<p class="article-categories">
+					${categories}
 				</p>
 			</section>
 			`;
