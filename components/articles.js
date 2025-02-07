@@ -28,14 +28,26 @@ window.addEventListener("WebComponentsReady", function () {
       `;
 		},
 		article(article = {}, _) {
+			const tempDiv = document.createElement("div");
+			tempDiv.innerHTML = article.description;
+			let plainTextDescription =
+				tempDiv.textContent || tempDiv.innerText || "";
+			plainTextDescription = plainTextDescription.replace(
+				/Continue reading on [^\s]+ \u00bb/,
+				"",
+			);
+
 			return `
 			<section class="article">
-                <header>
-                    <h5><a href="${article.link}" target="_blank">${article.title}</a></h5>
-                </header>
-                <p class="publish-date"><span class="publish-tag">Published on:</span> ${article.pubDate.split(" ")[0]}</p>
-            </section>
-            `;
+				<header>
+								<h5><a href="${article.link}" target="_blank">${article.title}</a></h5>
+				</header>
+				<p class="publish-date"><span class="publish-tag">Published on:</span> ${article.pubDate.split(" ")[0]}</p>
+				<p class="article-description">
+					${plainTextDescription}
+				</p>
+			</section>
+			`;
 		},
 	};
 	import("../components/component-builder.js").then(function () {
