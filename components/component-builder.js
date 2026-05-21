@@ -17,22 +17,23 @@
     console.log(...arguments)
   }
   
-  function updateAttributes (node1, node2) {
-    if (node1.nodeType !== ELEMENT_NODE || node1.nodeType !== ELEMENT_NODE) {
+  function updateAttributes (newNode, oldNode) {
+    if (newNode.nodeType !== ELEMENT_NODE || oldNode.nodeType !== ELEMENT_NODE) {
       return
     }
-    var node1Attributes = node1.getAttributeNames().sort()
-    var node2Attributes = node2.getAttributeNames().sort()
-    var newLength = node1Attributes.length
-    var oldLength = node2Attributes.length
-    for (var i = 0; i < newLength || i < oldLength; i++) {
-      var attr1Name = node1Attributes[i]
-      var attr2Name = node2Attributes[i]
-      if (!attr2Name || attr1Name === attr1Name) {
-        node2.setAttribute(attr1Name, node1.getAttribute(attr1Name))
+    var newAttrs = newNode.getAttributeNames()
+    var oldAttrs = oldNode.getAttributeNames()
+    var newSet = new Set(newAttrs)
+    for (var i = 0; i < newAttrs.length; i++) {
+      var name = newAttrs[i]
+      var value = newNode.getAttribute(name)
+      if (oldNode.getAttribute(name) !== value) {
+        oldNode.setAttribute(name, value)
       }
-      if (!attr1Name) {
-        node2.removeAttribute(attr2Name)
+    }
+    for (var j = 0; j < oldAttrs.length; j++) {
+      if (!newSet.has(oldAttrs[j])) {
+        oldNode.removeAttribute(oldAttrs[j])
       }
     }
   }
@@ -52,22 +53,18 @@
     return node && node.localName && node.localName.split('-').length > 1
   }
 
-  function updateElement ($parent, newNode, oldNode, index = 0) {
-    var notUpdate = (!oldNode && !newNode) 
-                      || (emptyTextNode(newNode) && emptyTextNode(oldNode)) 
+  function updateElement ($parent, newNode, oldNode) {
+    var notUpdate = (!oldNode && !newNode)
+                      || (emptyTextNode(newNode) && emptyTextNode(oldNode))
     if (notUpdate) {
       return
     }
     if (!oldNode) {
-      $parent.appendChild(
-        newNode
-      );
+      $parent.appendChild(newNode)
       return
     }
     if (!newNode) {
-      $parent.removeChild(
-        $parent.childNodes[index]
-      );
+      $parent.removeChild(oldNode)
       return
     }
     if (isTypeOfComponentBuilder(newNode) && isTypeOfComponentBuilder(oldNode)) {
@@ -75,26 +72,15 @@
       return
     }
     if (changed(newNode, oldNode)) {
-      $parent.replaceChild(
-        newNode,
-        $parent.childNodes[index]
-      );
+      $parent.replaceChild(newNode, oldNode)
       return
     }
-    if (newNode) {
-      var newLength = newNode.childNodes.length;
-      var oldLength = oldNode.childNodes.length;
-      updateAttributes(newNode, oldNode)
-      var newChildren = [...newNode.childNodes]
-      var oldChildren = [...oldNode.childNodes]
-      for (var i = 0; i < newLength || i < oldLength; i++) {
-        updateElement(
-          $parent.childNodes[index],
-          newChildren[i],
-          oldChildren[i],
-          i
-        );
-      }
+    updateAttributes(newNode, oldNode)
+    var newChildren = [].slice.call(newNode.childNodes)
+    var oldChildren = [].slice.call(oldNode.childNodes)
+    var max = Math.max(newChildren.length, oldChildren.length)
+    for (var i = 0; i < max; i++) {
+      updateElement(oldNode, newChildren[i], oldChildren[i])
     }
   }
 
@@ -110,26 +96,27 @@
   function setEvents (events) {
     this.listeners = []
     Object.keys(events || {}).forEach((key) => {
-      var type = key.split(/\ (.+)/)[0]
-      var selector = key.split(/\ (.+)/)[1]
+      var type = key.split(/ (.+)/)[0]
+      var selector = key.split(/ (.+)/)[1]
       var cb = events[key]
-      var eventFunction = function (event) {
+      var handler = function (event) {
         var isChildrenOf = [...this.querySelectorAll(selector)].some((element) => {
           return element.contains(event.target)
         })
         if (event.target && (isChildrenOf || event.target.matches(selector))) {
-          cb.call(this, ...arguments)
+          cb.call(this, event)
         }
-      }
-      this.listeners.push({ type, eventFunction })
-      this.addEventListener(type, eventFunction.bind(this))
+      }.bind(this)
+      this.listeners.push({ type, handler })
+      this.addEventListener(type, handler)
     })
   }
 
   function unSetEvents () {
     this.listeners.forEach((listener) => {
-      this.removeEventListener(listener.type, listener.eventFunction)
+      this.removeEventListener(listener.type, listener.handler)
     })
+    this.listeners = []
   }
 
   function mountedWrapper (options) {
