@@ -295,14 +295,46 @@ p {
 	background-color: #646464;
 }
 .resume {
-	padding: 1em 1em 2em;
+	padding: 5em 1em 4em;
 }
 .me-outro {
-	padding: 2em 1em;
-	border-top: 4px solid #3f9fdb;
+	padding: 3em 1em 2.5em;
+	background-color: #2c2c2c;
+	color: #c8c8c8;
+	text-align: center;
+}
+
+.me-outro > div {
+	max-width: 768px;
+}
+
+.me-outro p {
+	margin: 0.5em 0;
+	font-size: 0.9em;
+	line-height: 1.6;
+}
+
+.me-outro p:last-child {
+	margin-top: 1.5em;
+	font-family: var(--font-raleway);
+	font-size: 0.8em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #888;
+}
+
+.me-outro a {
+	color: var(--color-blue);
+	text-decoration: none;
+	border-bottom: 1px solid rgba(63, 159, 219, 0.4);
+	transition: border-color var(--ease);
+}
+
+.me-outro a:hover {
+	border-bottom-color: var(--color-blue);
 }
 .aims {
-	padding: 4em 1em 6em;
+	padding: 7em 1em 8em;
 	margin-bottom: -2em;
 }
 .aims:before {
@@ -320,7 +352,7 @@ p {
 }
 @media (min-width: 576px) {
 	.me-intro {
-		padding: 2em 1em;
+		padding: 2em 1em 6em;
 		justify-content: space-between;
 	}
 }
