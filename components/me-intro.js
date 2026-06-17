@@ -36,16 +36,19 @@ window.addEventListener("WebComponentsReady", function () {
 						return `<network-link network="${encodeJSON(network)}"></network-link>`;
 					})
 					.join("")}
+              <section class="network-link print-cv-icon">
+                <a href="#" role="button" title="Download CV as PDF" aria-label="Download CV as PDF">
+                  <i class="fas fa-file-pdf"></i>
+                </a>
+              </section>
             </section>
-            <button type="button" class="print-cv" title="Save this page as a PDF">
-              <i class="fas fa-file-pdf"></i> Download CV
-            </button>
           </section>
         </section>
       `;
 		},
 		events: {
-			"click .print-cv": function () {
+			"click .print-cv-icon": function (event) {
+				event.preventDefault();
 				window.print();
 			},
 		},
