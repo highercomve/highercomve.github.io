@@ -10,8 +10,8 @@ window.addEventListener("WebComponentsReady", function () {
 		render() {
 			return `
         <section class="network-link">
-          <a href="${this.network.url}" title="${this.network.title}" target="_blank">
-            <i class="fab fa-${this.network.icon}"></i>
+          <a href="${this.network.url}" title="${this.network.title}">
+            <i class="${this.network.iconClass || `fab fa-${this.network.icon}`}"></i>
           </a>
         </section>
       `;
