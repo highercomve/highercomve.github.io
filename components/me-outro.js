@@ -1,4 +1,3 @@
-
 window.addEventListener("WebComponentsReady", function () {
 	var Component = {
 		name: {

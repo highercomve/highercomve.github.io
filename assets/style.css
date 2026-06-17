@@ -188,7 +188,9 @@ body {
 	opacity: 0.6;
 	font-weight: 100;
 	font-size: 1.5em;
-	transition: transform var(--ease), opacity var(--ease);
+	transition:
+		transform var(--ease),
+		opacity var(--ease);
 	position: absolute;
 	right: 14px;
 	bottom: 10px;
@@ -217,8 +219,10 @@ html {
 	--font-lato: Lato, sans-serif;
 	--font-open-sans: "Open Sans", sans-serif;
 	--font-raleway: Raleway, sans-serif;
-	--shadow-card: 0 1px 2px rgba(12, 45, 66, 0.08), 0 4px 12px rgba(12, 45, 66, 0.06);
-	--shadow-card-hover: 0 2px 4px rgba(12, 45, 66, 0.1), 0 12px 28px rgba(12, 45, 66, 0.12);
+	--shadow-card:
+		0 1px 2px rgba(12, 45, 66, 0.08), 0 4px 12px rgba(12, 45, 66, 0.06);
+	--shadow-card-hover:
+		0 2px 4px rgba(12, 45, 66, 0.1), 0 12px 28px rgba(12, 45, 66, 0.12);
 	--radius: 6px;
 	--ease: 0.25s ease;
 }
@@ -396,8 +400,7 @@ p {
 
 .articles-outer {
 	padding: 4em 0 5em;
-	background:
-		linear-gradient(180deg, var(--color-light) 0%, #fff 100%);
+	background: linear-gradient(180deg, var(--color-light) 0%, #fff 100%);
 	position: relative;
 }
 
