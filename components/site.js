@@ -91,14 +91,16 @@ window.addEventListener("WebComponentsReady", function () {
 				<content-section title="Technical skills" wrapper="li" content="${skills}"></content-section>
 			</section>
 			<time-line gist="${this.gist}"></time-line>
-			<section class="cv-block education">
-				<content-section title="Education" wrapper="p" content="${education}"></content-section>
-			</section>
-			<section class="cv-block languages">
-				<content-section title="Languages" wrapper="li" content="${languages}"></content-section>
-			</section>
-			<section class="cv-block talks">
-				<content-section title="Talks" wrapper="li" content="${talks}"></content-section>
+			<section class="cv-extras">
+				<section class="cv-block cv-card education">
+					<content-section title="Education" wrapper="p" content="${education}"></content-section>
+				</section>
+				<section class="cv-block cv-card languages">
+					<content-section title="Languages" wrapper="li" content="${languages}"></content-section>
+				</section>
+				<section class="cv-block cv-card talks">
+					<content-section title="Talks" wrapper="li" content="${talks}"></content-section>
+				</section>
 			</section>
 			<latest-articles></latest-articles>
           	<me-outro name="${get(this, "content.name")}" url="${this.html_url}" ></me-outro>

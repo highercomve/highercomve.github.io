@@ -15,7 +15,7 @@
 	padding: 0 1em;
 }
 .articles {
-	max-width: 960px;
+	max-width: 852px;
 }
 .lato,
 body {
@@ -51,31 +51,44 @@ body {
 	font-style: italic;
 	color: #646464;
 }
+/* The <time-line> host has `contain: content`, so it owns its stacking
+   context — the z-index must sit on the host to lift it above the skills mask. */
+time-line {
+	position: relative;
+	z-index: 3;
+}
 .time-line {
 	padding: 6em 20px 4em 40px;
 	display: flex;
 	flex-direction: column;
 	position: relative;
+	background-image: linear-gradient(#3f9fdb, #3f9fdb);
+	background-repeat: no-repeat;
+	background-size: 2px 100%;
+	background-position: 1em 0;
 }
 @media (min-width: 768px) {
 	.time-line {
 		padding: 6em 0 4em;
+		background-position: center 0;
 	}
 }
-.time-line:before {
+.time-line:before,
+.time-line:after {
 	content: "";
 	display: block;
-	height: 100%;
-	width: 2px;
 	position: absolute;
-	left: 1em;
-	top: 0;
+	height: 2px;
+	width: 100vw;
+	left: 50%;
+	transform: translateX(-50%);
 	background-color: #3f9fdb;
 }
-@media (min-width: 768px) {
-	.time-line:before {
-		left: 50%;
-	}
+.time-line:before {
+	top: 0;
+}
+.time-line:after {
+	bottom: 0;
 }
 .time-line__item {
 	position: relative;
@@ -338,11 +351,11 @@ p {
 	border-bottom-color: var(--color-blue);
 }
 .aims {
-	padding: 7em 1em 8em;
+	padding: 9em 1em 13em;
 	margin-bottom: -2em;
 }
 .aims:before {
-	height: 160%;
+	height: 180%;
 	top: -60%;
 }
 .aims .content-section__title {
@@ -446,11 +459,13 @@ p {
 	gap: 2em;
 }
 
+/* The spine runs past the article list, bleeding into the section above and
+   the footer below so it visually connects to its neighbours. */
 .articles__timeline::before {
 	content: "";
 	position: absolute;
-	top: 0.5em;
-	bottom: 0.5em;
+	top: -20em;
+	bottom: -12em;
 	left: 5.5em;
 	width: 2px;
 	background-color: var(--color-blue);
@@ -624,13 +639,13 @@ p {
 /* Download-as-PDF icon, sits inline with the social links */
 .networks .print-cv-icon a {
 	cursor: pointer;
-	color: var(--color-blue);
+	color: #515151;
 	transition: color var(--ease);
 }
 
 .networks .print-cv-icon a:hover,
 .networks .print-cv-icon a:focus-visible {
-	color: var(--color-blue-strong);
+	color: var(--color-blue);
 	outline: none;
 }
 
@@ -640,6 +655,29 @@ p {
 	z-index: 1;
 	background-color: #fff;
 	padding: 2.5em 1em;
+}
+
+/* The skills block sits right under the slanted blue band. A flat white top
+   would clip the blue into a horizontal seam on wide screens, so mask it with
+   a rotated white edge instead — same constant 5deg as the colored bands. */
+.skills {
+	background-color: transparent;
+}
+.skills {
+	padding-top: 5em;
+	padding-bottom: 5em;
+}
+.skills::before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	left: -20%;
+	right: -20%;
+	top: -40px;
+	bottom: 0;
+	background-color: #fff;
+	transform: rotate(5deg);
+	transform-origin: 50% 0;
 }
 
 .cv-block .content-section {
@@ -703,6 +741,74 @@ p {
 	font-size: 0.95em;
 }
 
+/* Education / Languages / Talks: a two-up card grid (Talks spans full width).
+   Keeps the card + blue-accent + icon language from the timeline and blog,
+   but more deliberate than three stacked full-width lists. */
+/* 852 = 768 (section) + 2×24 (the timeline cards' spine overhang) + 2×1em
+   padding, so these cards line up edge-to-edge with the experience timeline. */
+.cv-extras {
+	max-width: 852px;
+	margin: 0 auto;
+	padding: 3em 1em;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.5em;
+}
+.cv-extras .talks {
+	grid-column: 1 / -1;
+}
+@media (max-width: 600px) {
+	.cv-extras {
+		grid-template-columns: 1fr;
+	}
+}
+.cv-card {
+	position: relative;
+	background-color: #fff;
+	border: 1px solid var(--color-border);
+	border-radius: 12px;
+	box-shadow: var(--shadow-card);
+	padding: 1.5em;
+	overflow: hidden;
+	transition:
+		box-shadow var(--ease),
+		transform var(--ease);
+}
+
+.cv-card:hover,
+.cv-card:focus-within {
+	box-shadow: var(--shadow-card-hover);
+	transform: translateY(-3px);
+}
+.cv-card .content-section__title {
+	display: flex;
+	align-items: center;
+	gap: 0.55em;
+	font-family: var(--font-raleway);
+	font-size: 0.8em;
+	font-weight: 700;
+	font-style: normal;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--color-blue);
+	margin: 0 0 1em;
+}
+.cv-card .content-section__title::before {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	font-size: 1.4em;
+	letter-spacing: 0;
+}
+.education .content-section__title::before {
+	content: "\f19d";
+}
+.languages .content-section__title::before {
+	content: "\f1ab";
+}
+.talks .content-section__title::before {
+	content: "\f130";
+}
+
 /*
  * Print / "Save as PDF" styles.
  * Reflow the page into a clean, single-column resume: a compact header with
@@ -735,11 +841,27 @@ p {
 	.time-line__item .fas,
 	.time-line__item::before,
 	.time-line__item::after,
+	.time-line::after,
+	.skills::before,
+	.cv-card::before,
+	.cv-card .content-section__title::before,
 	.aims::before,
 	.resume::before,
 	.grey-bg::before,
 	.blue-bg::before {
 		display: none !important;
+	}
+
+	.cv-extras {
+		display: block !important;
+		max-width: none !important;
+		padding: 0 !important;
+	}
+
+	.cv-card {
+		border: none !important;
+		box-shadow: none !important;
+		border-radius: 0 !important;
 	}
 
 	/* Repo-driven CV sections print compactly */
@@ -910,6 +1032,7 @@ p {
 	.time-line {
 		padding: 0 !important;
 		display: block !important;
+		background: none !important;
 	}
 
 	.time-line::before {
