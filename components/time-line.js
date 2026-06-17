@@ -9,14 +9,11 @@ window.addEventListener("WebComponentsReady", function () {
 			},
 		},
 		connectedCallback() {
-			getGist(this.gist)
-				.then((response) =>
-					JSON.parse(response.files["experience.json"].content),
-				)
-				.then((response) => {
-					this.timeline = response.items || [];
-					this.updateComponent();
-				});
+			getGist(this.gist, (response) => {
+				this.timeline =
+					JSON.parse(response.files["experience.json"].content).items || [];
+				this.updateComponent();
+			});
 		},
 		render() {
 			return `

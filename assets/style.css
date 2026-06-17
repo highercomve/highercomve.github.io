@@ -9,13 +9,13 @@
 .me-outro > div,
 .time-line,
 .articles {
-	max-width: 768px;
+	max-width: 960px;
 	margin: 0 auto;
 	width: 100%;
 	padding: 0 1em;
 }
 .articles {
-	max-width: 852px;
+	max-width: 1044px;
 }
 .lato,
 body {
@@ -322,7 +322,7 @@ p {
 }
 
 .me-outro > div {
-	max-width: 768px;
+	max-width: 960px;
 }
 
 .me-outro p {
@@ -386,6 +386,16 @@ p {
 	.me-intro .picture img {
 		width: 200px;
 	}
+}
+.me-intro .picture .location {
+	margin: 0.75em 0 0;
+	font-size: 0.9em;
+	font-weight: 700;
+	color: #555;
+}
+.me-intro .picture .location .fa-map-marker-alt {
+	color: #3aa0e3;
+	margin-right: 0.25em;
 }
 .me-intro .content {
 	flex: 0 1 70%;
@@ -744,10 +754,10 @@ p {
 /* Education / Languages / Talks: a two-up card grid (Talks spans full width).
    Keeps the card + blue-accent + icon language from the timeline and blog,
    but more deliberate than three stacked full-width lists. */
-/* 852 = 768 (section) + 2×24 (the timeline cards' spine overhang) + 2×1em
+/* 1044 = 960 (section) + 2×24 (the timeline cards' spine overhang) + 2×1em
    padding, so these cards line up edge-to-edge with the experience timeline. */
 .cv-extras {
-	max-width: 852px;
+	max-width: 1044px;
 	margin: 0 auto;
 	padding: 3em 1em;
 	display: grid;

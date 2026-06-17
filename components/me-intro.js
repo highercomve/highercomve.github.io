@@ -18,14 +18,20 @@ window.addEventListener("WebComponentsReady", function () {
 				return this.getAttribute("tagline") || "loading...";
 			},
 		},
+		location: {
+			get() {
+				return this.getAttribute("location") || "";
+			},
+		},
 		observedAttributes() {
-			return ["name", "tagline", "networks"];
+			return ["name", "tagline", "location", "networks"];
 		},
 		render() {
 			return `
         <section class="me-intro">
           <section class="picture">
             <img src="https://avatars3.githubusercontent.com/u/1034621?s=460&v=4">
+            ${this.location ? `<p class="location"><i class="fas fa-map-marker-alt"></i> ${this.location}</p>` : ""}
           </section>
           <section class="content">
             <h1>${this.name}</h1>

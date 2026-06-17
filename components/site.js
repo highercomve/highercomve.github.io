@@ -5,47 +5,6 @@ import "./content-section.js";
 import "./time-line.js";
 import "./articles.js";
 
-// Static CV content kept in the repo (not in the gist) so the downloaded
-// CV / print view matches the full written resume.
-var CV_SKILLS = [
-	"Golang",
-	"Docker",
-	"Kubernetes",
-	"Javascript",
-	"React",
-	"Vue.js",
-	"State management libraries",
-	"Web Components",
-	"Ruby",
-	"Amazon Web Services",
-	"HTML / CSS",
-	"Node.js",
-	"MySQL",
-	"MongoDB",
-	"PostgreSQL",
-	"Linux",
-	"Bash",
-	"Apache",
-	"Nginx",
-	"Git",
-	"Front-end automation tools",
-];
-
-var CV_EDUCATION = [
-	"<strong>Telecommunications Engineer</strong>",
-	"Universidad Cat&oacute;lica Andr&eacute;s Bello &mdash; 2009",
-];
-
-var CV_LANGUAGES = [
-	"<strong>English</strong>: written (advanced), verbal (advanced)",
-	"<strong>Spanish</strong>: native",
-];
-
-var CV_TALKS = [
-	"<strong>Noders JS</strong> &mdash; Santiago, Chile (January 2019). React Hooks.",
-	'<strong>La Plata JS</strong> &mdash; La Plata, Argentina (December 2018). The current state of web components in the browser and how we can use them today. <a href="http://slides.com/highercomve/web-components" target="_blank" rel="noopener">slides</a>',
-];
-
 window.addEventListener("WebComponentsReady", function () {
 	var Site = {
 		html_url: null,
@@ -56,15 +15,11 @@ window.addEventListener("WebComponentsReady", function () {
 			},
 		},
 		connectedCallback() {
-			getGist(this.gist)
-				.then((response) => {
-					this.html_url = response.html_url;
-					return JSON.parse(response.files["content.json"].content);
-				})
-				.then((response) => {
-					this.content = response;
-					this.updateComponent();
-				});
+			getGist(this.gist, (response) => {
+				this.html_url = response.html_url;
+				this.content = JSON.parse(response.files["content.json"].content);
+				this.updateComponent();
+			});
 		},
 		render() {
 			var networks = encodeJSON(get(this, "content.networks", []));
@@ -72,14 +27,14 @@ window.addEventListener("WebComponentsReady", function () {
 				get(this, "content.about_me.content", []),
 			);
 			var aimsContent = encodeJSON(get(this, "content.aims.content", []));
-			var skills = encodeJSON(CV_SKILLS);
-			var education = encodeJSON(CV_EDUCATION);
-			var languages = encodeJSON(CV_LANGUAGES);
-			var talks = encodeJSON(CV_TALKS);
+			var skills = encodeJSON(get(this, "content.skils.content", []));
+			var education = encodeJSON(get(this, "content.education.content", []));
+			var languages = encodeJSON(get(this, "content.languages.content", []));
+			var talks = encodeJSON(get(this, "content.talks.content", []));
 			return `
         <section class="site">
 			<header>
-				<me-intro name="${get(this, "content.name")}" tagline="${get(this, "content.tagline")}" networks="${networks}"></me-intro>
+				<me-intro name="${get(this, "content.name")}" tagline="${get(this, "content.tagline")}" location="${get(this, "content.location")}" networks="${networks}"></me-intro>
 			</header>
 			<section class="resume">
 				<content-section title="${get(this, "content.about_me.title")}" wrapper="${get(this, "content.about_me.wrapper")}" content="${aboutMeContent}"></content-section>
