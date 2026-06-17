@@ -656,30 +656,36 @@ p {
 
 /*
  * Print / "Save as PDF" styles.
- * Turns the page into a clean, single-column CV: expands the collapsed
- * timeline entries, drops the decorative skewed backgrounds, hides on-screen
- * chrome and fixes colors so nothing prints white-on-white.
+ * Reflow the page into a clean, single-column resume: a compact header with
+ * contact links, clearly labelled sections, and one readable block per role.
+ * Drops the decorative backgrounds, the blog, the footer and all on-screen
+ * chrome, and fixes colors so nothing prints white-on-white.
  */
 @media print {
 	@page {
-		margin: 1.5cm;
+		margin: 1.2cm 1.4cm;
 	}
 
 	body {
-		font-size: 12px;
+		font-size: 10.5pt;
+		line-height: 1.4;
 		color: #000;
 		background: #fff;
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
 	}
 
-	/* Hide on-screen-only chrome */
+	p {
+		font-weight: 400;
+	}
+
+	/* Hide on-screen-only chrome and decoration */
 	.print-cv,
 	.articles-outer,
 	.me-outro,
-	.time-line__item .fas {
-		display: none !important;
-	}
-
-	/* Remove the rotated colored backgrounds and any clipping */
+	.time-line__item .fas,
+	.time-line__item::before,
+	.time-line__item::after,
 	.aims::before,
 	.resume::before,
 	.grey-bg::before,
@@ -695,63 +701,177 @@ p {
 		overflow: visible !important;
 	}
 
+	/* ---- Shared section headings ---- */
+	.content-section__title,
+	.time-line::before {
+		display: block !important;
+		font-family: var(--font-open-sans) !important;
+		font-size: 1.05em !important;
+		font-weight: 700 !important;
+		font-style: normal !important;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: #000 !important;
+		border-bottom: 1.5px solid #000;
+		padding: 0 0 0.2em !important;
+		margin: 0 0 0.6em !important;
+		page-break-after: avoid;
+	}
+
+	/* The About section has an empty title — don't print a stray heading bar */
+	.content-section__title:empty {
+		display: none !important;
+	}
+
+	/* ---- Header ---- */
+	.site header {
+		padding: 0 !important;
+	}
+
+	.me-intro {
+		padding: 0 0 0.8em !important;
+		margin-bottom: 0.8em;
+		border-bottom: 2px solid #000;
+		justify-content: flex-start !important;
+		flex-wrap: nowrap !important;
+		gap: 1.2em;
+		page-break-after: avoid;
+	}
+
+	.me-intro .picture {
+		flex: 0 0 auto !important;
+		padding: 0 !important;
+	}
+
+	.me-intro .picture img {
+		width: 96px !important;
+		height: 96px !important;
+		object-fit: cover;
+	}
+
+	.me-intro .content {
+		flex: 1 1 auto !important;
+		text-align: left !important;
+	}
+
+	.me-intro .content h1 {
+		font-size: 1.7em !important;
+		margin: 0 !important;
+	}
+
+	.me-intro .content h3 {
+		font-size: 1em !important;
+		font-style: italic;
+		color: var(--color-muted) !important;
+		margin: 0.15em 0 0.5em !important;
+	}
+
+	/* Contact links: show the actual URL, not just an icon */
+	.networks {
+		display: block !important;
+		justify-content: flex-start !important;
+	}
+
+	.networks .network-link {
+		padding: 0 !important;
+		margin: 0 0 0.1em;
+	}
+
+	.networks .network-link a {
+		display: flex;
+		align-items: baseline;
+		gap: 0.5em;
+		color: #000 !important;
+		font-size: 0.82em !important;
+	}
+
+	.networks .network-link a .fab {
+		flex: 0 0 1.1em;
+		text-align: center;
+	}
+
+	.networks .network-link a::after {
+		content: attr(href);
+		font-family: var(--font-lato);
+		word-break: break-all;
+	}
+
+	/* ---- About / Aims sections ---- */
+	.resume {
+		padding: 0 0 0.8em !important;
+	}
+
+	.aims {
+		padding: 0 0 0.8em !important;
+		margin-bottom: 0.8em !important;
+	}
+
 	.aims .content-section__title {
 		color: #000 !important;
 	}
 
-	/* Tighten section spacing for paper */
-	.resume {
-		padding: 1.5em 0 1em !important;
+	.content-section__content p {
+		margin: 0.3em 0 !important;
 	}
 
-	.aims {
-		padding: 1.5em 0 1em !important;
-		margin-bottom: 0 !important;
+	.aims .content-section__content {
+		padding-left: 1.1em;
 	}
 
-	.me-intro {
-		padding: 0 0 1.5em !important;
-		justify-content: flex-start !important;
-		page-break-after: avoid;
+	.aims .content-section__content li {
+		margin: 0.2em 0;
 	}
 
-	.me-intro .picture img {
-		width: 120px !important;
-		-webkit-print-color-adjust: exact;
-		print-color-adjust: exact;
-	}
-
-	.networks .network-link a {
-		color: #000 !important;
-		font-size: 1.5em !important;
-	}
-
-	/* Expand every experience entry so the full history is on the page */
+	/* ---- Experience ---- */
 	.time-line {
-		padding: 1em 0 !important;
+		padding: 0 !important;
 		display: block !important;
 	}
 
 	.time-line::before {
-		display: none !important;
+		content: "Experience";
+		position: static !important;
+		height: auto !important;
+		width: auto !important;
+		background: none !important;
 	}
 
 	.time-line__item {
 		width: 100% !important;
 		left: 0 !important;
-		margin: 0 0 1em !important;
-		padding: 0.5em 0 1em !important;
+		margin: 0 0 0.7em !important;
+		padding: 0 !important;
+		background: none !important;
 		box-shadow: none !important;
 		border: none !important;
-		border-bottom: 1px solid var(--color-border) !important;
 		border-radius: 0 !important;
 		page-break-inside: avoid;
 		break-inside: avoid;
 	}
 
-	.time-line__item::before,
-	.time-line__item::after {
-		display: none !important;
+	.time-line__item .label {
+		float: right;
+		position: static !important;
+		padding: 0 !important;
+		background: none !important;
+		color: var(--color-muted) !important;
+		font-size: 0.85em !important;
+		font-weight: 600;
+	}
+
+	.time-line__item .title {
+		font-size: 1.02em !important;
+		font-weight: 700 !important;
+		color: #000 !important;
+		margin: 0 !important;
+		page-break-after: avoid;
+	}
+
+	.time-line__item .subtitle {
+		font-size: 0.85em !important;
+		font-style: italic;
+		color: var(--color-muted) !important;
+		margin: 0.05em 0 0.35em !important;
 	}
 
 	.time-line__item .description {
@@ -760,19 +880,10 @@ p {
 		overflow: visible !important;
 	}
 
-	.time-line__item .label {
-		position: static !important;
-		display: inline-block;
-		padding: 0 !important;
-		background: none !important;
-		color: var(--color-muted) !important;
-		font-style: italic;
-	}
-
-	/* Avoid orphaned headings */
-	.content-section__title,
-	.time-line__item .title {
-		page-break-after: avoid;
+	.time-line__item .description p {
+		margin: 0.25em 0 !important;
+		font-size: 0.92em;
+		line-height: 1.4;
 	}
 
 	a {
