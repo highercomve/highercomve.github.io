@@ -618,40 +618,86 @@ p {
 	}
 }
 
-/* Download CV button */
-.print-cv {
-	margin-top: 1.5em;
-	display: inline-flex;
-	align-items: center;
-	gap: 0.5em;
-	font-family: var(--font-raleway);
-	font-size: 0.85em;
-	font-weight: 600;
-	letter-spacing: 0.08em;
-	text-transform: uppercase;
-	color: #fff;
-	background-color: var(--color-blue);
-	border: none;
-	border-radius: 999px;
-	padding: 0.7em 1.4em;
+/* Download-as-PDF icon, sits inline with the social links */
+.networks .print-cv-icon a {
 	cursor: pointer;
-	box-shadow: 0 2px 8px rgba(63, 159, 219, 0.35);
-	transition:
-		background-color var(--ease),
-		box-shadow var(--ease),
-		transform var(--ease);
+	color: var(--color-blue);
+	transition: color var(--ease);
 }
 
-.print-cv:hover,
-.print-cv:focus-visible {
-	background-color: var(--color-blue-strong);
-	box-shadow: 0 4px 14px rgba(63, 159, 219, 0.45);
-	transform: translateY(-2px);
+.networks .print-cv-icon a:hover,
+.networks .print-cv-icon a:focus-visible {
+	color: var(--color-blue-strong);
 	outline: none;
 }
 
-.print-cv .fas {
-	font-size: 1.1em;
+/* Repo-driven CV sections (skills, education, languages, talks) */
+.cv-block {
+	position: relative;
+	z-index: 1;
+	background-color: #fff;
+	padding: 2.5em 1em;
+}
+
+.cv-block .content-section {
+	padding: 0;
+}
+
+.skills .content-section__content {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6em;
+	margin: 0;
+	padding: 0;
+}
+
+.skills .content-section__content li {
+	list-style: none;
+	font-family: var(--font-raleway);
+	font-size: 0.8em;
+	font-weight: 600;
+	letter-spacing: 0.03em;
+	background-color: rgba(63, 159, 219, 0.1);
+	color: var(--color-blue-strong);
+	padding: 0.45em 1em;
+	border-radius: 999px;
+}
+
+.languages .content-section__content,
+.talks .content-section__content {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.languages .content-section__content li,
+.talks .content-section__content li {
+	list-style: none;
+	position: relative;
+	margin: 0.5em 0;
+	padding-left: 1.3em;
+	line-height: 1.55;
+}
+
+.languages .content-section__content li::before,
+.talks .content-section__content li::before {
+	content: "\25B9";
+	position: absolute;
+	left: 0;
+	color: var(--color-blue);
+}
+
+.talks .content-section__content a {
+	color: var(--color-blue);
+}
+
+.education .content-section__content p {
+	margin: 0.2em 0;
+}
+
+.education .content-section__content p:last-child {
+	color: var(--color-muted);
+	font-size: 0.95em;
 }
 
 /*
@@ -680,7 +726,7 @@ p {
 	}
 
 	/* Hide on-screen-only chrome and decoration */
-	.print-cv,
+	.print-cv-icon,
 	.articles-outer,
 	.me-outro,
 	.time-line__item .fas,
@@ -691,6 +737,41 @@ p {
 	.grey-bg::before,
 	.blue-bg::before {
 		display: none !important;
+	}
+
+	/* Repo-driven CV sections print compactly */
+	.cv-block {
+		padding: 0 0 0.7em !important;
+		background: none !important;
+	}
+
+	.education,
+	.languages,
+	.talks {
+		break-inside: avoid;
+		page-break-inside: avoid;
+	}
+
+	.skills .content-section__content {
+		gap: 0.35em !important;
+	}
+
+	.skills .content-section__content li {
+		font-size: 0.78em !important;
+		padding: 0.15em 0.6em !important;
+		color: #000 !important;
+		background-color: rgba(63, 159, 219, 0.08) !important;
+		border: 0.5pt solid var(--color-border);
+	}
+
+	.languages .content-section__content li,
+	.talks .content-section__content li {
+		margin: 0.2em 0 !important;
+		font-size: 0.92em;
+	}
+
+	.education .content-section__content p:last-child {
+		font-size: 0.9em;
 	}
 
 	.aims,
