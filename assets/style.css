@@ -617,3 +617,166 @@ p {
 		animation-duration: 0.01ms !important;
 	}
 }
+
+/* Download CV button */
+.print-cv {
+	margin-top: 1.5em;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+	font-family: var(--font-raleway);
+	font-size: 0.85em;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: #fff;
+	background-color: var(--color-blue);
+	border: none;
+	border-radius: 999px;
+	padding: 0.7em 1.4em;
+	cursor: pointer;
+	box-shadow: 0 2px 8px rgba(63, 159, 219, 0.35);
+	transition:
+		background-color var(--ease),
+		box-shadow var(--ease),
+		transform var(--ease);
+}
+
+.print-cv:hover,
+.print-cv:focus-visible {
+	background-color: var(--color-blue-strong);
+	box-shadow: 0 4px 14px rgba(63, 159, 219, 0.45);
+	transform: translateY(-2px);
+	outline: none;
+}
+
+.print-cv .fas {
+	font-size: 1.1em;
+}
+
+/*
+ * Print / "Save as PDF" styles.
+ * Turns the page into a clean, single-column CV: expands the collapsed
+ * timeline entries, drops the decorative skewed backgrounds, hides on-screen
+ * chrome and fixes colors so nothing prints white-on-white.
+ */
+@media print {
+	@page {
+		margin: 1.5cm;
+	}
+
+	body {
+		font-size: 12px;
+		color: #000;
+		background: #fff;
+	}
+
+	/* Hide on-screen-only chrome */
+	.print-cv,
+	.articles-outer,
+	.me-outro,
+	.time-line__item .fas {
+		display: none !important;
+	}
+
+	/* Remove the rotated colored backgrounds and any clipping */
+	.aims::before,
+	.resume::before,
+	.grey-bg::before,
+	.blue-bg::before {
+		display: none !important;
+	}
+
+	.aims,
+	.resume,
+	.grey-bg,
+	.blue-bg {
+		color: #000 !important;
+		overflow: visible !important;
+	}
+
+	.aims .content-section__title {
+		color: #000 !important;
+	}
+
+	/* Tighten section spacing for paper */
+	.resume {
+		padding: 1.5em 0 1em !important;
+	}
+
+	.aims {
+		padding: 1.5em 0 1em !important;
+		margin-bottom: 0 !important;
+	}
+
+	.me-intro {
+		padding: 0 0 1.5em !important;
+		justify-content: flex-start !important;
+		page-break-after: avoid;
+	}
+
+	.me-intro .picture img {
+		width: 120px !important;
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+	}
+
+	.networks .network-link a {
+		color: #000 !important;
+		font-size: 1.5em !important;
+	}
+
+	/* Expand every experience entry so the full history is on the page */
+	.time-line {
+		padding: 1em 0 !important;
+		display: block !important;
+	}
+
+	.time-line::before {
+		display: none !important;
+	}
+
+	.time-line__item {
+		width: 100% !important;
+		left: 0 !important;
+		margin: 0 0 1em !important;
+		padding: 0.5em 0 1em !important;
+		box-shadow: none !important;
+		border: none !important;
+		border-bottom: 1px solid var(--color-border) !important;
+		border-radius: 0 !important;
+		page-break-inside: avoid;
+		break-inside: avoid;
+	}
+
+	.time-line__item::before,
+	.time-line__item::after {
+		display: none !important;
+	}
+
+	.time-line__item .description {
+		opacity: 1 !important;
+		max-height: none !important;
+		overflow: visible !important;
+	}
+
+	.time-line__item .label {
+		position: static !important;
+		display: inline-block;
+		padding: 0 !important;
+		background: none !important;
+		color: var(--color-muted) !important;
+		font-style: italic;
+	}
+
+	/* Avoid orphaned headings */
+	.content-section__title,
+	.time-line__item .title {
+		page-break-after: avoid;
+	}
+
+	a {
+		color: #000 !important;
+		text-decoration: none;
+	}
+}
