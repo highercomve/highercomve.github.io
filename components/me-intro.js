@@ -37,9 +37,17 @@ window.addEventListener("WebComponentsReady", function () {
 					})
 					.join("")}
             </section>
+            <button type="button" class="print-cv" title="Save this page as a PDF">
+              <i class="fas fa-file-pdf"></i> Download CV
+            </button>
           </section>
         </section>
       `;
+		},
+		events: {
+			"click .print-cv": function () {
+				window.print();
+			},
 		},
 	};
 	import("../components/component-builder.js").then(function () {
