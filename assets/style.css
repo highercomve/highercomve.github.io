@@ -165,11 +165,7 @@ time-line {
 	left: 0;
 	margin-left: 0;
 	margin-bottom: 3em;
-	padding: 24px 28px 28px;
-	cursor: default;
-}
-.time-line__item.current:hover {
-	transform: none;
+	padding: 24px 28px 48px;
 }
 @media (min-width: 768px) {
 	/* Line up with the outer edges of the alternating cards (offset 24px). */
