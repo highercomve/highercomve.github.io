@@ -15,7 +15,7 @@
       "title": "Rendering React on Golang with V8Go",
       "link": "https://itnext.io/rendering-react-on-golang-with-v8go-fd84cdad2844",
       "pubDate": "Sun, 09 Feb 2025 09:04:59 GMT",
-      "description": "Server-side rendering (SSR) is essential for improving web performance, SEO, and initial page load experience. React provides built-in SSR…",
+      "description": "Server-side rendering (SSR) is essential for improving web performance, SEO, and initial page load experience. React provides built-in SSR capabilities through react-dom/server, but this typically requires a Node.js environment. What if we want to run and render React components without Node.js?",
       "categories": [
         "golang",
         "reactjs",
@@ -26,7 +26,7 @@
       "title": "Parsing TAR files with Plain JavaScript",
       "link": "https://itnext.io/parsing-tar-files-with-plain-javascript-9541c3f23982",
       "pubDate": "Fri, 27 Sep 2024 17:26:23 GMT",
-      "description": "In the world of web development, there’s often a need to handle various file formats directly in the browser. One such format is TAR (Tape…",
+      "description": "In the world of web development, there’s often a need to handle various file formats directly in the browser. One such format is TAR (Tape Archive), commonly used for packaging multiple files and directories into a single file. This article demystifies TAR files and gives a practical guide to parsing them with plain JavaScript in the browser.",
       "categories": [
         "javascript",
         "web-development",
@@ -38,7 +38,7 @@
       "title": "Why did I remove every Javascript build step on my website",
       "link": "https://itnext.io/why-did-i-remove-every-build-step-on-my-website-181e96a45a9c",
       "pubDate": "Mon, 16 Sep 2024 22:06:51 GMT",
-      "description": "Introduction",
+      "description": "In the ever-evolving world of web development, it’s easy to get caught up in the latest trends and tools. But sometimes, taking a step back and simplifying can lead to surprising benefits. This is my journey of stripping away every JavaScript build step from my website and returning to the basics of pure JavaScript and HTML.",
       "categories": [
         "html",
         "web-development",

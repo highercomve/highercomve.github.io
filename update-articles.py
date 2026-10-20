@@ -3,6 +3,10 @@
 
 The site is static and browsers can't read the Medium feed directly (no CORS),
 so run this after publishing a new post:   ./update-articles.py
+
+Posts published through a publication (e.g. ITNEXT) only carry a one-line
+snippet in the feed: edit their "description" in assets/articles.json by hand;
+reruns keep the longer saved text.
 """
 import html
 import json
@@ -52,6 +56,15 @@ def main():
 
     if not items:
         sys.exit("no posts found in the feed; leaving articles.json untouched")
+
+    # Publication posts only give a short snippet in the feed; keep any longer
+    # description already saved (e.g. written by hand) for the same post.
+    if OUT.exists():
+        saved = {i["link"]: i["description"] for i in json.loads(OUT.read_text())["items"]}
+        for item in items:
+            previous = saved.get(item["link"], "")
+            if len(previous) > len(item["description"]):
+                item["description"] = previous
     OUT.write_text(json.dumps({"items": items}, indent=2, ensure_ascii=False) + "\n")
     print(f"wrote {len(items)} posts to {OUT}")
 
