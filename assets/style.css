@@ -882,12 +882,12 @@ p {
  */
 @media print {
 	@page {
-		margin: 1.2cm 1.4cm;
+		margin: 1.5cm 1.6cm;
 	}
 
 	body {
 		font-size: 10.5pt;
-		line-height: 1.4;
+		line-height: 1.55;
 		color: #000;
 		background: #fff;
 		-webkit-print-color-adjust: exact;
@@ -930,7 +930,7 @@ p {
 
 	/* Repo-driven CV sections print compactly */
 	.cv-block {
-		padding: 0 0 0.7em !important;
+		padding: 0 0 1.4em !important;
 		background: none !important;
 	}
 
@@ -942,12 +942,12 @@ p {
 	}
 
 	.skills .content-section__content {
-		gap: 0.35em !important;
+		gap: 0.5em 0.4em !important;
 	}
 
 	.skills .content-section__content li {
 		font-size: 0.78em !important;
-		padding: 0.15em 0.6em !important;
+		padding: 0.2em 0.65em !important;
 		color: #000 !important;
 		background-color: rgba(63, 159, 219, 0.08) !important;
 		border: 0.5pt solid var(--color-border);
@@ -955,7 +955,7 @@ p {
 
 	.languages .content-section__content li,
 	.talks .content-section__content li {
-		margin: 0.2em 0 !important;
+		margin: 0.4em 0 !important;
 		font-size: 0.92em;
 	}
 
@@ -982,8 +982,8 @@ p {
 		text-transform: uppercase;
 		color: #000 !important;
 		border-bottom: 1.5px solid #000;
-		padding: 0 0 0.2em !important;
-		margin: 0 0 0.6em !important;
+		padding: 0 0 0.3em !important;
+		margin: 0 0 0.9em !important;
 		page-break-after: avoid;
 	}
 
@@ -998,8 +998,8 @@ p {
 	}
 
 	.me-intro {
-		padding: 0 0 0.8em !important;
-		margin-bottom: 0.8em;
+		padding: 0 0 1.2em !important;
+		margin-bottom: 1.6em;
 		border-bottom: 2px solid #000;
 		justify-content: flex-start !important;
 		flex-wrap: nowrap !important;
@@ -1043,7 +1043,7 @@ p {
 
 	.networks .network-link {
 		padding: 0 !important;
-		margin: 0 0 0.1em;
+		margin: 0 0 0.2em;
 	}
 
 	.networks .network-link a {
@@ -1067,12 +1067,12 @@ p {
 
 	/* ---- About / Aims sections ---- */
 	.resume {
-		padding: 0 0 0.8em !important;
+		padding: 0 0 1.4em !important;
 	}
 
 	.aims {
-		padding: 0 0 0.8em !important;
-		margin-bottom: 0.8em !important;
+		padding: 0 0 1.4em !important;
+		margin-bottom: 0 !important;
 	}
 
 	.aims .content-section__title {
@@ -1080,7 +1080,7 @@ p {
 	}
 
 	.content-section__content p {
-		margin: 0.3em 0 !important;
+		margin: 0.6em 0 !important;
 	}
 
 	.aims .content-section__content {
@@ -1088,8 +1088,8 @@ p {
 	}
 
 	.aims .content-section__content li {
-		margin: 0.2em 0;
-		line-height: 1.4;
+		margin: 0.45em 0;
+		line-height: 1.5;
 	}
 
 	/* ---- Experience ---- */
@@ -1113,20 +1113,30 @@ p {
 	}
 
 	.skills content-section + content-section {
-		margin-top: 0.7em;
+		margin-top: 1.4em;
 	}
 
 	.time-line__item {
 		width: 100% !important;
 		left: 0 !important;
-		margin: 0 0 0.7em !important;
+		margin: 0 0 1.4em !important;
 		padding: 0 !important;
 		background: none !important;
 		box-shadow: none !important;
 		border: none !important;
 		border-radius: 0 !important;
-		page-break-inside: avoid;
+	}
+
+	/* Jobs may flow across pages (no half-empty pages); keep the title with
+	   its first bullets and never split a single bullet. */
+	.time-line__item .subtitle {
+		break-after: avoid;
+		page-break-after: avoid;
+	}
+
+	.time-line__item .description li {
 		break-inside: avoid;
+		page-break-inside: avoid;
 	}
 
 	.time-line__item .label {
@@ -1153,7 +1163,7 @@ p {
 		font-family: var(--font-lato) !important;
 		font-weight: 400 !important;
 		color: #444 !important;
-		margin: 0.05em 0 0.35em !important;
+		margin: 0.15em 0 0.5em !important;
 	}
 
 	.time-line__item .description {
@@ -1163,9 +1173,9 @@ p {
 	}
 
 	.time-line__item .description li {
-		margin: 0.2em 0 !important;
+		margin: 0.4em 0 !important;
 		font-size: 0.92em;
-		line-height: 1.4;
+		line-height: 1.5;
 	}
 
 	a {
