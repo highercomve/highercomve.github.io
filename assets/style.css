@@ -160,6 +160,28 @@ time-line {
 		margin-left: calc(50% + 24px);
 	}
 }
+.time-line__item.current {
+	width: auto;
+	left: 0;
+	margin-left: 0;
+	margin-bottom: 3em;
+	padding: 24px 28px 28px;
+	cursor: default;
+}
+.time-line__item.current:hover {
+	transform: none;
+}
+@media (min-width: 768px) {
+	/* Line up with the outer edges of the alternating cards (offset 24px). */
+	.time-line__item.current {
+		margin-left: -24px;
+		margin-right: -24px;
+	}
+}
+.time-line__item.current:before,
+.time-line__item.current:after {
+	display: none;
+}
 .time-line__item .label {
 	font-size: 0.8em;
 	font-weight: 100;

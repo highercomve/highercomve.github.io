@@ -23,13 +23,14 @@ window.addEventListener("WebComponentsReady", function () {
       `;
 		},
 		event(item = {}, index) {
-			const type = index % 2 === 0 ? "odd" : "even";
-			// Current role starts expanded so its details are visible without a click.
-			const opened = index === 0 ? " opened" : "";
+			// The current role is a full-width, always-open card above the
+			// alternating timeline, so its details read without a click.
+			const current = index === 0;
+			const type = current ? "current opened" : index % 2 === 1 ? "odd" : "even";
 			return `
-        <section class="time-line__item ${type}${opened}">
+        <section class="time-line__item ${type}">
           <span class="label">${item.label}</span>
-          <i class="fas fa-angle-down"></i>
+          ${current ? "" : '<i class="fas fa-angle-down"></i>'}
           <h1 class="title">${item.title}</h1>
           <h2 class="subtitle">${item.subtitle}</h2>
           <ul class="description">
@@ -40,9 +41,10 @@ window.addEventListener("WebComponentsReady", function () {
 		},
 		events: {
 			"click .time-line__item": function (event, element) {
-				event.target
-					.closest(".time-line__item")
-					.classList.toggle("opened");
+				var item = event.target.closest(".time-line__item");
+				if (!item.classList.contains("current")) {
+					item.classList.toggle("opened");
+				}
 			},
 		},
 	};
