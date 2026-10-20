@@ -217,6 +217,14 @@ time-line {
 	overflow: hidden;
 	max-height: 0;
 }
+.time-line__item ul.description {
+	margin: 0;
+	padding-left: 1.2em;
+}
+.time-line__item .description li {
+	margin: 0.5em 0;
+	line-height: 1.5;
+}
 body,
 html {
 	margin: 0;
@@ -256,7 +264,9 @@ p {
 }
 .networks {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
+	row-gap: 0.5em;
 }
 @media (min-width: 576px) {
 	.networks {
@@ -354,12 +364,36 @@ p {
 	padding: 9em 1em 13em;
 	margin-bottom: -2em;
 }
+/* Fixed offsets, not percentages: a % of a tall section reaches past the
+   grey summary band and shows a blue wedge under the header. */
 .aims:before {
-	height: 180%;
-	top: -60%;
+	top: -12em;
+	bottom: -6em;
+	height: auto;
 }
-.aims .content-section__title {
+.aims .content-section__title,
+.resume .content-section__title {
 	color: #fff;
+}
+.aims .content-section__content li {
+	margin: 0.7em 0;
+	line-height: 1.5;
+}
+/* Real heading text for parsers/screen readers; the timeline itself is the
+   on-screen visual, so keep it out of sight until print. */
+.experience-title {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	white-space: nowrap;
+}
+.skills content-section {
+	display: block;
+}
+.skills content-section + content-section {
+	margin-top: 2em;
 }
 .me-intro {
 	padding: 3em 1em 5em;
@@ -398,11 +432,13 @@ p {
 	margin-right: 0.25em;
 }
 .me-intro .content {
-	flex: 0 1 70%;
+	flex: 1 1 100%;
+	min-width: 0;
 	text-align: center;
 }
 @media (min-width: 576px) {
 	.me-intro .content {
+		flex: 0 1 70%;
 		text-align: left;
 	}
 }
@@ -918,8 +954,7 @@ p {
 	}
 
 	/* ---- Shared section headings ---- */
-	.content-section__title,
-	.time-line::before {
+	.content-section__title {
 		display: block !important;
 		font-family: var(--font-open-sans) !important;
 		font-size: 1.05em !important;
@@ -1007,7 +1042,7 @@ p {
 	}
 
 	.networks .network-link a::after {
-		content: attr(href);
+		content: attr(data-print);
 		font-family: var(--font-lato);
 		word-break: break-all;
 	}
@@ -1036,6 +1071,7 @@ p {
 
 	.aims .content-section__content li {
 		margin: 0.2em 0;
+		line-height: 1.4;
 	}
 
 	/* ---- Experience ---- */
@@ -1046,11 +1082,20 @@ p {
 	}
 
 	.time-line::before {
-		content: "Experience";
-		position: static !important;
-		height: auto !important;
-		width: auto !important;
-		background: none !important;
+		display: none !important;
+	}
+
+	.experience-title {
+		position: static;
+		width: auto;
+		height: auto;
+		overflow: visible;
+		clip: auto;
+		white-space: normal;
+	}
+
+	.skills content-section + content-section {
+		margin-top: 0.7em;
 	}
 
 	.time-line__item {
@@ -1087,7 +1132,9 @@ p {
 	.time-line__item .subtitle {
 		font-size: 0.85em !important;
 		font-style: italic;
-		color: var(--color-muted) !important;
+		font-family: var(--font-lato) !important;
+		font-weight: 400 !important;
+		color: #444 !important;
 		margin: 0.05em 0 0.35em !important;
 	}
 
@@ -1097,8 +1144,8 @@ p {
 		overflow: visible !important;
 	}
 
-	.time-line__item .description p {
-		margin: 0.25em 0 !important;
+	.time-line__item .description li {
+		margin: 0.2em 0 !important;
 		font-size: 0.92em;
 		line-height: 1.4;
 	}

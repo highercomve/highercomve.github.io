@@ -24,15 +24,17 @@ window.addEventListener("WebComponentsReady", function () {
 		},
 		event(item = {}, index) {
 			const type = index % 2 === 0 ? "odd" : "even";
+			// Current role starts expanded so its details are visible without a click.
+			const opened = index === 0 ? " opened" : "";
 			return `
-        <section class="time-line__item ${type}">
+        <section class="time-line__item ${type}${opened}">
           <span class="label">${item.label}</span>
           <i class="fas fa-angle-down"></i>
           <h1 class="title">${item.title}</h1>
           <h2 class="subtitle">${item.subtitle}</h2>
-          <div class="description">
-            ${item.description.map((d) => `<p>${d}</p>`).join("")}
-          </div>
+          <ul class="description">
+            ${item.description.map((d) => `<li>${d}</li>`).join("")}
+          </ul>
         </section>
       `;
 		},

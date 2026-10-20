@@ -27,6 +27,9 @@ window.addEventListener("WebComponentsReady", function () {
 				get(this, "content.about_me.content", []),
 			);
 			var aimsContent = encodeJSON(get(this, "content.aims.content", []));
+			var competencies = encodeJSON(
+				get(this, "content.competencies.content", []),
+			);
 			var skills = encodeJSON(get(this, "content.skils.content", []));
 			var education = encodeJSON(get(this, "content.education.content", []));
 			var languages = encodeJSON(get(this, "content.languages.content", []));
@@ -43,8 +46,10 @@ window.addEventListener("WebComponentsReady", function () {
 				<content-section title="${get(this, "content.aims.title")}" wrapper="${get(this, "content.aims.wrapper")}" content="${aimsContent}"></content-section>
 			</section>
 			<section class="cv-block skills">
+				<content-section title="Core competencies" wrapper="li" content="${competencies}"></content-section>
 				<content-section title="Technical skills" wrapper="li" content="${skills}"></content-section>
 			</section>
+			<h1 class="content-section__title experience-title">Professional Experience</h1>
 			<time-line gist="${this.gist}"></time-line>
 			<section class="cv-extras">
 				<section class="cv-block cv-card education">

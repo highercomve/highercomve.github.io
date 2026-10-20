@@ -47,7 +47,8 @@
 			(typeof node1 === "string" && node1 !== node2) ||
 			(node1.nodeType === TEXT_NODE &&
 				node1.textContent !== node2.textContent) ||
-			node1.nodeType !== node2.nodeType
+			node1.nodeType !== node2.nodeType ||
+			node1.nodeName !== node2.nodeName
 		);
 	}
 
