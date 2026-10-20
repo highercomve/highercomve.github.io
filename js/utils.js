@@ -1,4 +1,5 @@
-const rssFeedUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@highercomve';
+// Snapshot of the Medium feed, refreshed with ./update-articles.py (Medium has no CORS).
+const rssFeedUrl = '/assets/articles.json';
 
 export function encodeJSON (n, defaultObj = {}) {
   return encodeURIComponent(JSON.stringify(n || defaultObj))

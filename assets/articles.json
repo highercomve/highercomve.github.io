@@ -1,0 +1,49 @@
+{
+  "items": [
+    {
+      "title": "This Is the Dev Setup You’re Looking For: My Journey to Chromebook Development (The Dad Edition)",
+      "link": "https://medium.com/@highercomve/this-is-the-dev-setup-youre-looking-for-my-journey-to-chromebook-development-the-dad-edition-eb750f472c7c",
+      "pubDate": "Wed, 22 Oct 2025 21:09:25 GMT",
+      "description": "The Preamble: When Life (and a Baby) Confined My Workspace Let’s be real. For as long as I can remember in this game, my setup was all about raw power . My rig? A high-spec desktop and a 15\" ASUS ROG that sounded like a jet engine when the fans kicked in. That ROG was my own personal Death Star — insane firepower, but the battery life? Let’s just say it had a “thermal exhaust port” vulnerability. ",
+      "categories": [
+        "perspective",
+        "fatherhood",
+        "software-development"
+      ]
+    },
+    {
+      "title": "Rendering React on Golang with V8Go",
+      "link": "https://itnext.io/rendering-react-on-golang-with-v8go-fd84cdad2844",
+      "pubDate": "Sun, 09 Feb 2025 09:04:59 GMT",
+      "description": "Server-side rendering (SSR) is essential for improving web performance, SEO, and initial page load experience. React provides built-in SSR…",
+      "categories": [
+        "golang",
+        "reactjs",
+        "server-side-rendering"
+      ]
+    },
+    {
+      "title": "Parsing TAR files with Plain JavaScript",
+      "link": "https://itnext.io/parsing-tar-files-with-plain-javascript-9541c3f23982",
+      "pubDate": "Fri, 27 Sep 2024 17:26:23 GMT",
+      "description": "In the world of web development, there’s often a need to handle various file formats directly in the browser. One such format is TAR (Tape…",
+      "categories": [
+        "javascript",
+        "web-development",
+        "compression",
+        "programming"
+      ]
+    },
+    {
+      "title": "Why did I remove every Javascript build step on my website",
+      "link": "https://itnext.io/why-did-i-remove-every-build-step-on-my-website-181e96a45a9c",
+      "pubDate": "Mon, 16 Sep 2024 22:06:51 GMT",
+      "description": "Introduction",
+      "categories": [
+        "html",
+        "web-development",
+        "javascript"
+      ]
+    }
+  ]
+}
