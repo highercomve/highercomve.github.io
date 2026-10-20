@@ -16,32 +16,12 @@ export function get (obj, path, fallback = '') {
   return rest.length > 0 ? get(obj[current], rest.join('.'), fallback) : obj[current]
 }
 
-// Load the bundled data.json first so content renders instantly and offline,
-// then fetch the live gist and re-render only if its content actually differs.
-// onUpdate may be called up to twice: once with the local mirror, once with the gist.
+// Content is static: everything renders from the bundled assets/data.json.
+// (The gist argument is kept for the callers; the live gist is no longer read.)
 export function getGist (gist, onUpdate) {
-  const contentOf = (o) =>
-    Object.values((o && o.files) || {}).map((f) => f.content).join('\0')
-
-  let local = null
   return fetch(`/assets/data.json`)
     .then((r) => r.json())
-    .then((json) => {
-      local = json
-      onUpdate(json)
-    })
-    .catch(() => {})
-    .then(() => {
-      // Local dev previews the unpublished data.json, not the live gist.
-      if (['localhost', '127.0.0.1'].includes(location.hostname)) return null
-      return fetch(`https://api.github.com/gists/${gist}`)
-    })
-    .then((r) => (!r || r.status >= 300 ? null : r.json()))
-    .then((remote) => {
-      if (remote && contentOf(remote) !== contentOf(local)) {
-        onUpdate(remote)
-      }
-    })
+    .then(onUpdate)
     .catch(() => {})
 }
 
