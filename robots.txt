@@ -1,0 +1,5 @@
+# Everyone is welcome, AI crawlers included: this site is a public CV.
+User-agent: *
+Allow: /
+
+Sitemap: https://highercomve.github.io/sitemap.xml

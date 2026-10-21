@@ -309,6 +309,17 @@ p {
 	font-weight: 300;
 	line-height: 1.6em;
 }
+/* Static CV from build-cv.py, shown until <web-site> renders (and to
+   crawlers and readers without JS). */
+.cv-static {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 1em;
+	line-height: 1.6;
+}
+.cv-static a {
+	color: var(--color-blue-strong);
+}
 .site {
 	display: flex;
 	flex-flow: column;
