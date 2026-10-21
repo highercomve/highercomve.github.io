@@ -162,7 +162,9 @@
 			name="msapplication-TileImage"
 			content="/assets/favicon/ms-icon-144x144.png"
 		/>
-		<meta name="theme-color" content="#ffffff" />
+		<meta name="color-scheme" content="light dark" />
+		<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+		<meta name="theme-color" content="#14171b" media="(prefers-color-scheme: dark)" />
 
 		<link
 			rel="stylesheet"
@@ -262,7 +264,7 @@
 			<ul>
 				<li>Architected and built the remote build platform from the ground up: builder service, distributed runners, API and MCP tools (Go, MongoDB, Docker BuildKit); Dockerfile, Yocto and Buildroot builds into signed, multi-arch packages and flashable images.</li>
 				<li>Built the Pantacor Hub MCP server (34 tools) with an OAuth 2.1 authorization server, plus the pantavisor-apps Agent Skill for AI-driven build and deploy with human approval.</li>
-				<li>Architected and built Pantacor Fleet and its CLI almost single-handedly since 2020 (930+ commits): Go/React, SpiceDB, OPA; one customer fleet runs 15,000+ Linux devices.</li>
+				<li>Architected and built Pantacor Fleet almost single-handedly (Go/React), the platform one customer runs 15,000+ Linux devices on: rule-based channels, phased rollouts with label targeting and automatic halt on error thresholds, a state-merging deployment engine, SpiceDB/OPA multi-tenant authorization, audit log and webhooks; wrote its CLI from scratch.</li>
 				<li>Top individual contributor to the Pantahub core API and owner of its security architecture: 2FA and passkeys, OAuth/PKCE and Entra ID SSO, TLS onboarding, certificate revocation, device secret rotation; plus MQTT push OTA, remote commands, live logs and web SSH.</li>
 				<li>Lead the hosted platform's cloud infrastructure on Kubernetes (Helm, Kafka, monitoring, backups) and built its event-driven webhooks service.</li>
 				<li>Partner with the engineering teams of large enterprise manufacturers on OTA and fleet-management solutions.</li>
