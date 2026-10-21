@@ -75,17 +75,17 @@ June 2016 – May 2017 · payfully.co - Node.js / AWS Lambda / React / React Nat
 
 ### Software Developer — Retiqueta
 
-2015 – 2016 · retiqueta.com - Ruby on Rails / Ionic / Docker / Kubernetes
+2015 – 2016 · retiqueta.com - Ruby on Rails / MySQL / Ionic / Docker / Kubernetes
 
-- Built the Ionic mobile app and Ruby on Rails API (ActiveRecord models and migrations) for a second-hand fashion marketplace, running on Docker and Kubernetes (Google Container Engine) with CI and end-to-end tests.
+- Built the Ionic mobile app and Ruby on Rails API (MySQL, ActiveRecord models and migrations) for a second-hand fashion marketplace, running on Docker and Kubernetes (Google Container Engine) with CI and end-to-end tests.
 
 ### Technical Lead (from Software Developer) — Escuelaweb
 
-2008 – 2015 · escuelaweb.net - PHP / Ruby on Rails / PostgreSQL / AWS S3 / JavaScript
+2008 – 2015 · escuelaweb.net - PHP / Ruby on Rails / PostgreSQL / MySQL / AWS S3 / JavaScript
 
 - Grew from developer to Technical Lead, owning all systems, infrastructure (including object storage on AWS S3) and integrations for an online learning platform with live video classes.
 - Designed the platform's PostgreSQL schemas and evolved them with ActiveRecord migrations in Ruby on Rails.
-- Delivered PHP, Ruby on Rails and WordPress projects, including lapatilla.com, a high-traffic news site; mentored engineers who went on to international careers.
+- Delivered PHP, Ruby on Rails and WordPress projects on MySQL for consulting clients, including lapatilla.com, a high-traffic news site; mentored engineers who went on to international careers.
 
 ### Instructor (Ruby, HTML / CSS / JavaScript) — Escuelaweb
 
