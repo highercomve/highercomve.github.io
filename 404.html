@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Not found · Sergio Marin</title>
+	<meta name="robots" content="noindex" />
+	<script>
+		// The project sites moved from highercomve.github.io/<Project>/ to
+		// <project>.foreachdeveloper.com. Send any old link there, path included.
+		(function () {
+			var moved = {
+				oriel: "oriel",
+				ghostpen: "ghostpen",
+				ghostreel: "ghostreel",
+				hollershare: "hollershare",
+				ghostpantry: "ghostpantry",
+			};
+			var parts = location.pathname.split("/");
+			var sub = moved[(parts[1] || "").toLowerCase()];
+			if (sub) {
+				var rest = parts.slice(2).join("/");
+				location.replace("https://" + sub + ".foreachdeveloper.com/" + rest + location.search + location.hash);
+			}
+		})();
+	</script>
+	<style>
+		:root { color-scheme: light dark; }
+		body {
+			display: grid;
+			min-height: 100vh;
+			margin: 0;
+			place-content: center;
+			padding: 16px;
+			font: 16px/1.6 system-ui, sans-serif;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Page not found</h1>
+		<p><a href="/">Go to the home page</a> or see the projects at <a href="https://foreachdeveloper.com/">foreachdeveloper.com</a>.</p>
+	</main>
+</body>
+</html>
