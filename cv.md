@@ -12,14 +12,14 @@ Web version: https://highercomve.github.io/
 
 Senior software engineer with 18 years turning complex distributed systems into reliable products, from Linux edge devices to Kubernetes clouds. Top individual contributor to Pantacor's open-source over-the-air update platform, used in production by large manufacturers whose engineering teams I work with directly.
 
-Most recently I architected and built Pantacor's remote build platform — builder, runners, API and MCP server — so AI assistants can take an app from source code to a signed image running on a device. I learn fast and ship what I learn, and I'm looking to bring that to teams building AI infrastructure and workflow automation.
+Most recently I architected and built Pantacor's remote build platform — builder, runners, API and MCP server — so AI assistants can take an app from source code to a signed image running on a device. I also run the platform in production: I'm always on call, and I built its observability (Prometheus, Grafana, OpenTelemetry), Stripe billing and code-signing PKI. On my own time I ship local-AI apps in Zig, Rust and Python with llama.cpp, whisper.cpp, RAG and LLM evals. I learn fast and ship what I learn, and I'm looking to bring that to teams building AI infrastructure and workflow automation.
 
 ## Highlights
 
 - **Build platform, from the ground up** — architected the builder service, runners, API and MCP tools that turn source code into signed, multi-arch device images
 - **AI workflow automation** — MCP server with 34 tools and its own OAuth 2.1 authorization server, plus an Agent Skill that lets AI assistants build and deploy device apps
 - **15,000+ devices** — one customer fleet runs on Pantacor Fleet, which I architected and have built almost single-handedly since 2020
-- **2,500+ commits** across the Pantacor platform since 2019 — API, Fleet, web UI, CLI and hosted infrastructure
+- **3,500+ commits** across the Pantacor platform since 2019 — API, Fleet, web UI, CLI and hosted infrastructure
 - **Security architecture** — passkeys and 2FA, OAuth 2.1 / SSO, TLS device onboarding, certificate revocation and device secret rotation
 - **Enterprise customers** — technical partner to the engineering teams of large manufacturers, from solution design to production
 
