@@ -1047,8 +1047,14 @@ p {
 
 	/* Repo-driven CV sections print compactly */
 	.cv-block {
-		padding: 0 0 1.4em !important;
+		padding: 0 0 0.6em !important;
 		background: none !important;
+	}
+
+	/* The headline, skills and bullets already carry these; printing them
+	   pushed the CV onto a fourth page. The screen and cv.md keep them. */
+	.skills content-section[title="Core competencies"] {
+		display: none !important;
 	}
 
 	.education,

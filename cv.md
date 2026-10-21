@@ -12,16 +12,14 @@ Web version: https://highercomve.github.io/
 
 Senior software engineer with 18 years turning complex distributed systems into reliable products, from Linux edge devices to Kubernetes clouds. Top individual contributor to Pantacor's open-source over-the-air update platform, used in production by large manufacturers whose engineering teams I work with directly.
 
-Most recently I architected and built Pantacor's remote build platform — builder, runners, API and MCP server — so AI assistants can take an app from source code to a signed image running on a device. I also run the platform in production: I'm always on call, and I built its observability (Prometheus, Grafana, OpenTelemetry), Stripe billing and code-signing PKI. On my own time I ship local-AI apps in Zig, Rust and Python with llama.cpp, whisper.cpp, RAG and LLM evals. I learn fast and ship what I learn, and I'm looking to bring that to teams building AI infrastructure and workflow automation.
+Most recently I architected and built Pantacor's remote build platform — builder, runners, API and MCP server — so AI assistants can take an app from source code to a signed image running on a device. I also run the platform in production: I'm always on call, and I built its observability (Prometheus, Grafana, OpenTelemetry), Stripe billing and code-signing PKI. On my own time I ship local-AI apps in Zig, Rust and Python with llama.cpp, whisper.cpp, RAG and LLM evals. I'm looking to bring that to teams building AI infrastructure and workflow automation.
 
 ## Highlights
 
-- **Build platform, from the ground up** — architected the builder service, runners, API and MCP tools that turn source code into signed, multi-arch device images
-- **AI workflow automation** — MCP server with 34 tools and its own OAuth 2.1 authorization server, plus an Agent Skill that lets AI assistants build and deploy device apps
+- **Build platform, from the ground up** — builder service, sandboxed runners, API and MCP tools that turn source code into signed, multi-arch device images
+- **AI workflow automation** — MCP server (34 tools) with its own OAuth 2.1 authorization server, plus an Agent Skill that lets AI assistants build and deploy device apps
 - **15,000+ devices** — one customer fleet runs on Pantacor Fleet, which I architected and have built almost single-handedly since 2020
-- **3,500+ commits** across the Pantacor platform since 2019 — API, Fleet, web UI, CLI and hosted infrastructure
-- **Security architecture** — passkeys and 2FA, OAuth 2.1 / SSO, TLS device onboarding, certificate revocation and device secret rotation
-- **Enterprise customers** — technical partner to the engineering teams of large manufacturers, from solution design to production
+- **3,500+ commits** across the Pantacor platform since 2019, and always on call for it in production
 
 ## Core Competencies
 
@@ -36,73 +34,55 @@ Most recently I architected and built Pantacor's remote build platform — build
 
 ## Technical Skills
 
-Golang, Python, Rust, Model Context Protocol (MCP), Agent Skills, AI coding agents (Claude Code, Codex), llama.cpp / whisper.cpp, RAG / vector search, LLM evals / prompt engineering, OpenAI-compatible APIs, Docker, Kubernetes, Helm, k3s, Bare-metal Kubernetes (Scaleway, Hetzner), Amazon Web Services (AWS), Google Cloud, AWS Lambda, AWS S3, Microservices, MQTT, Apache Kafka, Kafka Connect / Debezium (CDC), Transactional outbox, OAuth 2.1 / OIDC / PKCE, WebAuthn / passkeys, SpiceDB / OPA, X.509 PKI / code signing, TPM 2.0, gosec / govulncheck, On-call / incident response, OpenTelemetry, Prometheus, Grafana, Elasticsearch / Kibana / Fluentd (EFK), Stripe, Docker BuildKit, REST APIs, OpenAPI / Swagger, CI/CD, GitLab CI, Linux, Linux containers, Yocto / Embedded Linux, Buildroot, kas, Cross-compilation (Docker Buildx, QEMU, musl), D-Bus, ConnMan / NetworkManager, Bluetooth LE (BlueZ), WireGuard / Tailscale, Bash, Zig, JavaScript, TypeScript, Node.js, React, React Native, Kotlin, Vue.js, Ruby, Ruby on Rails, ActiveRecord / ORMs, PHP, PostgreSQL, SQL, MongoDB, MySQL, Nginx, TDD, Playwright, Testcontainers
+Go (Golang), Python, Rust, Zig, TypeScript / JavaScript, Node.js, Model Context Protocol (MCP), Agent Skills, AI coding agents (Claude Code, Codex), llama.cpp / whisper.cpp, RAG / vector search, LLM evals / prompt engineering, OpenAI-compatible APIs, Docker / Docker BuildKit, Kubernetes / Helm / k3s, Bare-metal Kubernetes (Scaleway, Hetzner), Amazon Web Services (AWS Lambda, AWS S3), Google Cloud, Microservices / REST APIs, OpenAPI / Swagger, MQTT, Apache Kafka / Kafka Connect / Debezium (CDC), Transactional outbox, OAuth 2.1 / OIDC / PKCE, WebAuthn / passkeys, SpiceDB / OPA, X.509 PKI / code signing / TPM 2.0, On-call / incident response, OpenTelemetry / Prometheus / Grafana, Elasticsearch / Kibana / Fluentd (EFK), Stripe, CI/CD / GitLab CI, gosec / govulncheck, Linux / Linux containers, Yocto / Buildroot / kas / Embedded Linux, Cross-compilation (Docker Buildx, QEMU, musl), D-Bus / ConnMan / NetworkManager, Bluetooth LE (BlueZ), WireGuard / Tailscale, Bash, React / React Native / Vue.js, Kotlin, Ruby / Ruby on Rails / ActiveRecord / ORMs, PHP, PostgreSQL / MySQL / SQL, MongoDB, Nginx, TDD / Playwright / Testcontainers
 
 ## Professional Experience
 
 ### Senior Software Engineer — Pantacor
 
-March 2019 – Present · pantacor.com - Go / Kubernetes / MongoDB / AWS S3 / MQTT / Kafka / OAuth 2.1 / MCP / OpenTelemetry / Stripe / React / Zig / Python
+March 2019 – Present · pantacor.com - Go / Kubernetes / MongoDB / Kafka / MQTT / OAuth 2.1 / MCP / OpenTelemetry / React / Python
 
-- Architected and built Pantacor's remote build platform from the ground up: a multi-tenant build service (Go, MongoDB) with atomic job claims, heartbeat recovery and sandboxed, resource-limited Docker BuildKit runners. Customers turn a container image or Git repository (Dockerfile, Yocto/kas, Buildroot) into signed packages and flashable images for 5 CPU architectures, with encrypted secrets and usage quotas, from the API, pvr, the web UI or a GitHub Action client written in Python.
-- Made the platform AI-native: designed and built the Pantacor Hub MCP server on the official MCP Go SDK (34 tools plus prompts, Streamable HTTP, 63 tests) with its own OAuth 2.1 authorization server (Dynamic Client Registration, PKCE, RFC 8414/8707) so claude.ai and Claude Code connect directly, and the pantavisor-apps Agent Skill that lets AI assistants (Claude Code, OpenCode, Codex) build, sign and deploy device apps, with human approval before every change.
-- Architected and built Pantacor Fleet almost single-handedly since 2020 (900+ of ~950 commits), the release and fleet-management platform one customer runs 15,000+ Linux devices on (Go/React): rule-based channels, phased rollouts with label targeting and automatic halt on error thresholds, and a deployment engine that merges each device's state with conflict handling. It runs on a lease-based worker engine on MongoDB, syncs through signed webhook events instead of polling, authorizes in three layers (JWT, OPA, SpiceDB/Zanzibar-style ReBAC) and is traced end to end with OpenTelemetry; documented in OpenAPI (108 operations). Wrote its CLI (fleetcli) from scratch.
-- Top individual contributor to the Pantahub core API (600+ commits) and owner of its security architecture: two-factor auth with passkeys, OAuth/PKCE and Entra ID single sign-on, TPM-based device identity, TLS onboarding and certificate revocation (CRLs), a Hub-operated certificate authority for OEM code-signing identities (CSR-only enrollment, key rotation and revocation) and AES-GCM envelope-encrypted secrets; designed a power-loss-safe device secret rotation protocol. Fixed the findings of a 2026 security review, made gosec/govulncheck gates block CI, and migrated the API to a new HTTP framework behind golden contract tests. Also built MQTT push-based OTA updates, remote commands, live logs and web SSH.
-- Lead the hosted platform's infrastructure on bare-metal Kubernetes clusters at Scaleway and Hetzner (Helm, Kafka, backups), with object storage on AWS S3, and am always on call for it: incident response and production support, from devices that stop taking updates to production bugs, through to the fix. Built its observability stack: Prometheus, Grafana, OpenTelemetry/Jaeger, Elastic APM and Elasticsearch/Fluentd/Kibana. Built the event-driven webhooks service as an at-least-once, idempotent pipeline on Kafka Connect/Debezium change data capture, with a transactional outbox, dead-letter queue, replay and HMAC-signed delivery.
-- Built Pantacor's subscription billing service on Stripe (Go, MongoDB, OpenTelemetry): subscriptions with upgrades, downgrades and prorations, invoices and Stripe webhooks, plus the billing UI.
-- Partner with the engineering teams of large enterprise manufacturers to design and integrate over-the-air update and fleet-management solutions into their products and release pipelines: enablement workshops and hands-on onboarding of their teams onto Pantacor Fleet as the management system for their device fleets.
-- Also core maintainer of the web dashboard (React 19, Vite; 800+ commits; cut the entry bundle by two thirds), pvr (Go CLI, 500+ commits: binary delta updates, reproducible exports, BLE Wi-Fi provisioning), pvflasher (Go/Fyne image flasher, 2.7x faster than the balenaEtcher engine with full read-back verification), pvwificonnect (Wi-Fi onboarding over D-Bus with ConnMan/NetworkManager, captive portal and BLE Improv), pantavisor-mocker (Zig fleet simulator) and container-ci, whose multi-arch pvpkg.json package format I created and 12+ projects use.
+- Architected and built Pantacor's multi-tenant remote build platform (Go, MongoDB) with atomic job claims, heartbeat recovery and sandboxed Docker BuildKit runners that turns container images and Git repositories (Dockerfile, Yocto/kas, Buildroot) into signed images for 5 CPU architectures, with a GitHub Action client written in Python.
+- Made the platform AI-native: built the Pantacor Hub MCP server on the official MCP Go SDK (34 tools plus prompts, Streamable HTTP, 63 tests) with its own OAuth 2.1 authorization server (Dynamic Client Registration, PKCE) for claude.ai and Claude Code, and the pantavisor-apps Agent Skill that lets AI assistants build and deploy device apps with human approval.
+- Architected and built Pantacor Fleet almost single-handedly since 2020 (900+ of ~950 commits), the fleet-management platform one customer runs 15,000+ Linux devices on (Go/React): phased rollouts with automatic halt on error thresholds, a state-merging deployment engine on a lease-based MongoDB worker engine, event-driven webhook sync, three-layer authorization (JWT, OPA, SpiceDB/Zanzibar-style ReBAC), OpenTelemetry tracing, an OpenAPI spec (108 operations) and its CLI.
+- Top individual contributor to the Pantahub core API (600+ commits) and owner of its security architecture: passkeys and 2FA, OAuth/PKCE and Entra ID SSO, TPM device identity and certificate revocation (CRLs), a certificate authority for OEM code signing, AES-GCM encrypted secrets and gosec/govulncheck CI gates; designed a power-loss-safe device secret rotation protocol. Also built MQTT push OTA updates and web SSH.
+- Lead the hosted platform's bare-metal Kubernetes infrastructure (Scaleway, Hetzner; Helm, Kafka, AWS S3), always on call for it. Built its observability stack (Prometheus, Grafana, OpenTelemetry/Jaeger, EFK) and its webhooks service: an at-least-once, idempotent pipeline on Kafka Connect/Debezium CDC with a transactional outbox, dead-letter queue, replay and HMAC-signed delivery.
+- Built the subscription billing service on Stripe (Go, MongoDB): subscriptions with prorations, invoices, webhooks and the billing UI.
+- Partner with the engineering teams of large enterprise manufacturers on over-the-air update and fleet-management solutions: solution design, enablement workshops and hands-on onboarding onto Pantacor Fleet.
+- Core maintainer of the web dashboard (React 19, Vite; 800+ commits), pvr (Go CLI, 500+ commits), pvflasher (2.7x faster than the balenaEtcher engine), pvwificonnect (D-Bus, BLE), pantavisor-mocker (Zig) and container-ci (used by 12+ projects).
 
 ### Founder & Engineer — forEach developer
 
-Ongoing · foreachdeveloper.com - open-source studio - Zig / Rust / Python / TypeScript / llama.cpp / whisper.cpp / MCP
+Ongoing · foreachdeveloper.com - open-source studio, built with AI coding agents (Claude Code, Codex) - Zig / Rust / Python / TypeScript / llama.cpp / whisper.cpp / MCP
 
-- Built Oriel, an open-source Zig framework for desktop and mobile apps (Linux, Windows, macOS, Android) with built-in local AI: llama.cpp, whisper.cpp, Kokoro TTS and sqlite-vec. 63 releases.
-- Shipped GhostReel (Rust, React): local video search and AI-assisted editing with Whisper transcription, vision-language keyframe descriptions and hybrid full-text + vector search, a tool-calling editing agent with an LLM-as-judge and replay evals, and a 19-tool MCP server. CUDA, Vulkan, Metal and MLX builds; 29 releases.
-- Shipped GhostPen: offline AI writing, dictation, live captions and meeting transcription with speaker diarization. Inference runs in an isolated helper process; moving it from Rust/Tauri to Zig cut idle memory by 55%. 28 releases.
-- Built highllama (Python): a local LLM serving stack with MoE offload, a contamination-free coding benchmark (pass@1 across 8 languages), and a gateway that runs local-model sub-agents under Claude Code and Codex.
-- Work with an agentic engineering workflow (Claude Code, Codex): architect, implementer and multi-model review agents.
+- Built Oriel, an open-source Zig framework for desktop and mobile apps with built-in local AI (llama.cpp, whisper.cpp, Kokoro TTS, sqlite-vec); 63 releases.
+- Shipped GhostReel (Rust): local video search and AI editing with Whisper, vision-language models, hybrid full-text + vector search, an LLM-as-judge with replay evals and a 19-tool MCP server; 29 releases.
+- Shipped GhostPen (offline AI writing, dictation and meeting transcription; 28 releases) and highllama (Python): local LLM serving with a contamination-free coding benchmark (pass@1 across 8 languages).
 
-### Technical Lead — uBiome
+### Technical Lead (from Senior Software Engineer) — uBiome
 
-October 2018 – January 2019 · ubiome.com - Product Team - Vue.js / CI / A/B testing
+June 2017 – January 2019 · ubiome.com - Product Team - Node.js / Vue.js / PostgreSQL / CI / A/B testing
 
-- Led the migration of 5 production applications from Meteor to Vue.js.
-- Cut application load time from 30 seconds to 5 seconds after leading a performance review.
-- Built the shared component libraries, configuration, TDD workflow, CI, performance tracking and A/B testing that let the front-end team ship faster.
-
-### Senior Software Engineer — uBiome
-
-June 2017 – October 2018 · ubiome.com - Product Team - Node.js / Vue.js / PostgreSQL
-
-- Built the patient and doctor applications — from ordering a kit to viewing results and reports — with Node.js, Vue.js and PostgreSQL.
-- Established a TDD culture: ran internal training, set up the CI test pipeline (Drone) and gated merges on passing tests.
+- Built the patient and doctor applications (Node.js, Vue.js, PostgreSQL); as Technical Lead, migrated 5 production applications from Meteor to Vue.js, cut load time from 30 seconds to 5 seconds, and set up TDD, CI (Drone), shared component libraries and A/B testing.
 
 ### Senior Software Engineer — Payfully
 
 June 2016 – May 2017 · payfully.co - Node.js / AWS Lambda / React / React Native
 
-- First engineer hired after the CTO: built the AWS Lambda/Node.js microservices platform and the React web, React Native and admin apps, and onboarded every new developer.
+- First engineer after the CTO: built the AWS Lambda/Node.js microservices platform and the React web, React Native and admin apps; onboarded every new developer.
 
 ### Software Developer — Retiqueta
 
 2015 – 2016 · retiqueta.com - Ruby on Rails / MySQL / Ionic / Docker / Kubernetes
 
-- Built the Ionic mobile app and Ruby on Rails API (MySQL, ActiveRecord models and migrations) for a second-hand fashion marketplace, running on Docker and Kubernetes (Google Container Engine) with CI and end-to-end tests.
+- Built the Ionic mobile app and Ruby on Rails API (MySQL) for a second-hand fashion marketplace, on Docker and Kubernetes (Google Container Engine) with CI and end-to-end tests.
 
-### Technical Lead (from Software Developer) — Escuelaweb
+### Technical Lead & Instructor (from Software Developer) — Escuelaweb
 
 2008 – 2015 · escuelaweb.net - PHP / Ruby on Rails / PostgreSQL / MySQL / AWS S3 / JavaScript
 
-- Grew from developer to Technical Lead, owning all systems, infrastructure (including object storage on AWS S3) and integrations for an online learning platform with live video classes.
-- Designed the platform's PostgreSQL schemas and evolved them with ActiveRecord migrations in Ruby on Rails.
-- Delivered PHP, Ruby on Rails and WordPress projects on MySQL for consulting clients, including lapatilla.com, a high-traffic news site; mentored engineers who went on to international careers.
-
-### Instructor (Ruby, HTML / CSS / JavaScript) — Escuelaweb
-
-2009 – 2015 · escuelaweb.net - Ruby on Rails / Sinatra / HTML5 / CSS3 / JavaScript
-
-- Taught web development for 6 years: Ruby on Rails and Sinatra APIs, and modern front-end (HTML5, CSS3, preprocessors, AngularJS, jQuery).
+- Grew from developer to Technical Lead, owning all systems, infrastructure (AWS S3) and integrations for an online learning platform with live video classes; designed its PostgreSQL schemas and ActiveRecord migrations.
+- Delivered PHP, Ruby on Rails and WordPress projects on MySQL for consulting clients, including the high-traffic news site lapatilla.com; taught web development for 6 years and mentored engineers into international careers.
 
 ## Education
 
@@ -112,11 +92,9 @@ Universidad Católica Andrés Bello — 2009
 
 ## Languages
 
-- **English**: written (advanced), verbal (advanced)
-- **Spanish**: native
+- **English**: advanced (written and verbal) · **Spanish**: native
 
 ## Talks
 
-- **Open Source Summit North America (Linux Foundation)** — Austin, TX (June 2022). Hands-on workshops with the Pantacor team.
-- **Noders JS** — Santiago, Chile (January 2019). React Hooks.
-- **La Plata JS** — La Plata, Argentina (December 2018). The current state of web components in the browser and how we can use them today. [slides](http://slides.com/highercomve/web-components)
+- **Open Source Summit North America (Linux Foundation)** — Austin, TX (June 2022). Hands-on workshops.
+- **Noders JS** — Santiago, Chile (2019): React Hooks · **La Plata JS** — Argentina (2018): web components [slides](http://slides.com/highercomve/web-components)
