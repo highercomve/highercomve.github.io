@@ -36,19 +36,19 @@ Most recently I architected and built Pantacor's remote build platform — build
 
 ## Technical Skills
 
-Golang, Model Context Protocol (MCP), Agent Skills, AI coding agents (Claude Code, Codex), Docker, Kubernetes, Helm, k3s, Bare-metal Kubernetes (Scaleway, Hetzner), Amazon Web Services (AWS), Google Cloud, AWS Lambda, Microservices, MQTT, Apache Kafka, OAuth 2.1 / OIDC / PKCE, WebAuthn / passkeys, SpiceDB / OPA, Docker BuildKit, REST APIs, CI/CD, GitLab CI, Linux, Linux containers, Yocto / Embedded Linux, Bash, Zig, JavaScript, TypeScript, Node.js, React, React Native, Vue.js, Ruby, Ruby on Rails, ActiveRecord / ORMs, PHP, PostgreSQL, SQL, MongoDB, MySQL, Nginx, TDD
+Golang, Model Context Protocol (MCP), Agent Skills, AI coding agents (Claude Code, Codex), Docker, Kubernetes, Helm, k3s, Bare-metal Kubernetes (Scaleway, Hetzner), Amazon Web Services (AWS), Google Cloud, AWS Lambda, AWS S3, Microservices, MQTT, Apache Kafka, OAuth 2.1 / OIDC / PKCE, WebAuthn / passkeys, SpiceDB / OPA, Docker BuildKit, REST APIs, CI/CD, GitLab CI, Linux, Linux containers, Yocto / Embedded Linux, Bash, Zig, JavaScript, TypeScript, Node.js, React, React Native, Vue.js, Ruby, Ruby on Rails, ActiveRecord / ORMs, PHP, PostgreSQL, SQL, MongoDB, MySQL, Nginx, TDD
 
 ## Professional Experience
 
 ### Senior Software Engineer — Pantacor
 
-March 2019 – Present · pantacor.com - Go / Kubernetes / MongoDB / MQTT / Kafka / OAuth 2.1 / MCP / React / Zig
+March 2019 – Present · pantacor.com - Go / Kubernetes / MongoDB / AWS S3 / MQTT / Kafka / OAuth 2.1 / MCP / React / Zig
 
 - Architected and built Pantacor's remote build platform from the ground up — builder service, distributed runners, API and MCP tools (Go, MongoDB, Docker BuildKit). Customers turn a container image or Git repository (Dockerfile, Yocto, Buildroot) into signed, multi-arch device packages and flashable images, with encrypted secrets, OEM signing identities and usage quotas.
 - Made the platform AI-native: designed the Pantacor Hub MCP server (34 tools) with its own OAuth 2.1 authorization server, and the pantavisor-apps Agent Skill that lets AI assistants (Claude Code, claude.ai, OpenCode, Codex) take an app from idea to running on a device — build, sign, image and deploy — with human approval before every change.
 - Architected and built Pantacor Fleet almost single-handedly since 2020, the release and fleet-management platform one customer runs 15,000+ Linux devices on (Go/React): channels with rule-based device assignment, phased rollouts in waves with label targeting, time windows and automatic halt on error thresholds, device-acceptance push modes, and a deployment engine that merges each device's state with conflict handling, cancellation and backoff. Designed its multi-tenant fine-grained authorization (SpiceDB, OPA), audit log, webhooks and OAuth/PKCE access, and wrote its CLI (fleetcli) from scratch.
 - Top individual contributor to the Pantahub core API and owner of its security architecture: two-factor auth with passkeys, OAuth/PKCE and Entra ID single sign-on, TLS device onboarding, certificate revocation, and a power-loss-safe device secret rotation protocol. Also built MQTT push-based OTA updates, remote commands, live logs and web SSH.
-- Lead the hosted platform's infrastructure on bare-metal Kubernetes clusters at Scaleway and Hetzner (Helm, Kafka, monitoring, backups) and built its event-driven webhooks service (Kafka, HMAC-signed delivery).
+- Lead the hosted platform's infrastructure on bare-metal Kubernetes clusters at Scaleway and Hetzner (Helm, Kafka, monitoring, backups), with object storage on AWS S3, and built its event-driven webhooks service (Kafka, HMAC-signed delivery).
 - Partner with the engineering teams of large enterprise manufacturers to design and integrate over-the-air update and fleet-management solutions into their products and release pipelines.
 - Also core maintainer of the web dashboard (React, 760+ commits), pvr (Go CLI), pvflasher (Go image flasher), pantavisor-mocker (Zig device simulator) and container-ci, the CI template used by 12+ container-app projects.
 
@@ -81,9 +81,9 @@ June 2016 – May 2017 · payfully.co - Node.js / AWS Lambda / React / React Nat
 
 ### Technical Lead (from Software Developer) — Escuelaweb
 
-2008 – 2015 · escuelaweb.net - PHP / Ruby on Rails / PostgreSQL / JavaScript
+2008 – 2015 · escuelaweb.net - PHP / Ruby on Rails / PostgreSQL / AWS S3 / JavaScript
 
-- Grew from developer to Technical Lead, owning all systems, infrastructure and integrations for an online learning platform with live video classes.
+- Grew from developer to Technical Lead, owning all systems, infrastructure (including object storage on AWS S3) and integrations for an online learning platform with live video classes.
 - Designed the platform's PostgreSQL schemas and evolved them with ActiveRecord migrations in Ruby on Rails.
 - Delivered PHP, Ruby on Rails and WordPress projects, including lapatilla.com, a high-traffic news site; mentored engineers who went on to international careers.
 
