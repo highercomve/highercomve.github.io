@@ -272,6 +272,7 @@ html {
 	--color-footer-bg: #2c2c2c;
 	--color-footer-text: #c8c8c8;
 	--color-footer-muted: #888;
+	--color-foreach-accent: #e5532a;
 	color-scheme: light;
 }
 /* Dark theme follows the OS setting. Screen only, so the printed CV stays
@@ -291,6 +292,7 @@ html {
 		--color-footer-bg: #0d0f12;
 		--color-footer-text: #b4b9c0;
 		--color-footer-muted: #7c838c;
+		--color-foreach-accent: #ff6a3d;
 		--shadow-card:
 			0 1px 2px rgba(0, 0, 0, 0.4), 0 4px 12px rgba(0, 0, 0, 0.3);
 		--shadow-card-hover:
@@ -852,7 +854,8 @@ p {
 	grid-template-columns: 1fr 1fr;
 	gap: 1.5em;
 }
-.cv-extras .talks {
+.cv-extras .talks,
+.cv-extras .foreach {
 	grid-column: 1 / -1;
 }
 @media (max-width: 600px) {
@@ -906,6 +909,68 @@ p {
 .talks .content-section__title::before {
 	content: "\f130";
 }
+.foreach .content-section__title::before {
+	content: "\f121";
+}
+.foreach .content-section__content p {
+	margin: 0.4em 0;
+	line-height: 1.55;
+}
+/* forEach developer wordmark, in that site's own orange accent */
+.foreach__brand {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+	margin-bottom: 0.3em;
+	font-family: var(--font-open-sans);
+	font-size: 1.3em;
+	font-weight: 600;
+	color: var(--color-text);
+	text-decoration: none;
+}
+.foreach__mark {
+	width: 1.6em;
+	height: 1.6em;
+	flex: none;
+	transition: transform var(--ease);
+}
+.foreach__mark circle {
+	fill: var(--color-foreach-accent);
+}
+.foreach__brand:hover .foreach__mark {
+	transform: rotate(-8deg) scale(1.08);
+}
+.foreach__brand b {
+	color: var(--color-foreach-accent);
+}
+.foreach__brand i {
+	font-style: normal;
+	font-weight: 400;
+	color: var(--color-muted);
+}
+.foreach__cta {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.3em;
+	margin-top: 0.4em;
+	font-family: var(--font-open-sans);
+	font-size: 0.9em;
+	font-weight: 600;
+	color: var(--color-blue);
+	text-decoration: none;
+	transition: color var(--ease);
+}
+.foreach__cta span {
+	transition: transform var(--ease);
+}
+.foreach__cta:hover,
+.foreach__cta:focus-visible {
+	color: var(--color-blue-strong);
+}
+.foreach__cta:hover span,
+.foreach__cta:focus-visible span {
+	transform: translateX(4px);
+}
 
 /*
  * Print / "Save as PDF" styles.
@@ -934,6 +999,7 @@ p {
 
 	/* Hide on-screen-only chrome and decoration */
 	.print-cv-icon,
+	.foreach,
 	.articles-outer,
 	.me-outro,
 	.time-line__item .fas,
@@ -950,16 +1016,22 @@ p {
 		display: none !important;
 	}
 
+	/* Same column as the experience timeline, instead of shrinking to fit */
 	.cv-extras {
 		display: block !important;
-		max-width: none !important;
+		width: 100%;
+		max-width: 960px !important;
 		padding: 0 !important;
 	}
 
-	.cv-card {
+	.cv-card,
+	.cv-card:hover,
+	.cv-card:focus-within {
 		border: none !important;
 		box-shadow: none !important;
 		border-radius: 0 !important;
+		transform: none !important;
+		transition: none !important;
 	}
 
 	/* Repo-driven CV sections print compactly */
@@ -1127,7 +1199,8 @@ p {
 	}
 
 	/* ---- Experience ---- */
-	.time-line {
+	.time-line,
+	.experience-title-wrap {
 		padding: 0 !important;
 		display: block !important;
 		background: none !important;
