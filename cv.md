@@ -47,8 +47,8 @@ March 2019 – Present · pantacor.com - Go / Kubernetes / MongoDB / Kafka / MQT
 - Architected and built Pantacor Fleet almost single-handedly since 2020 (900+ of ~950 commits), the fleet-management platform one customer runs 15,000+ Linux devices on (Go/React): phased rollouts with automatic halt on error thresholds, a state-merging deployment engine on a lease-based MongoDB worker engine, event-driven webhook sync, three-layer authorization (JWT, OPA, SpiceDB/Zanzibar-style ReBAC), OpenTelemetry tracing, an OpenAPI spec (108 operations) and its CLI.
 - Top individual contributor to the Pantahub core API (600+ commits) and owner of its security architecture: passkeys and 2FA, OAuth/PKCE and Entra ID SSO, TPM device identity and certificate revocation (CRLs), a certificate authority for OEM code signing, AES-GCM encrypted secrets and gosec/govulncheck CI gates; designed a power-loss-safe device secret rotation protocol. Also built MQTT push OTA updates and web SSH.
 - Lead the hosted platform's bare-metal Kubernetes infrastructure (Scaleway, Hetzner; Helm, Kafka, AWS S3), always on call for it. Built its observability stack (Prometheus, Grafana, OpenTelemetry/Jaeger, EFK) and its webhooks service: an at-least-once, idempotent pipeline on Kafka Connect/Debezium CDC with a transactional outbox, dead-letter queue, replay and HMAC-signed delivery.
-- Built the subscription billing service on Stripe (Go, MongoDB): subscriptions with prorations, invoices, webhooks and the billing UI.
-- Partner with the engineering teams of large enterprise manufacturers on over-the-air update and fleet-management solutions: solution design, enablement workshops and hands-on onboarding onto Pantacor Fleet.
+- Built the subscription billing service on Stripe (Go, MongoDB): prorations, invoices, webhooks and the billing UI.
+- Led a 12-person cross-company team (2 at Pantacor, 8 at the customer, 2 at its manufacturing partner) integrating a large global manufacturer onto Pantacor Fleet, 15,000+ devices shipped worldwide in its first product generation: a dedicated cluster, coordinated OTA updates across the two computers in each device, and user-accepted updates.
 - Core maintainer of the web dashboard (React 19, Vite; 800+ commits), pvr (Go CLI, 500+ commits), pvflasher (2.7x faster than the balenaEtcher engine), pvwificonnect (D-Bus, BLE), pantavisor-mocker (Zig) and container-ci (used by 12+ projects).
 
 ### Founder & Engineer — forEach developer
@@ -63,9 +63,9 @@ Ongoing · foreachdeveloper.com - open-source studio, built with AI coding agent
 
 June 2017 – January 2019 · ubiome.com - Product Engineering - Node.js / Vue.js / PostgreSQL / PHI / CI / A/B testing
 
-- Led the 8-person frontend team for the customer product: patient and doctor apps with test results and reports, and the checkout, all handling Protected Health Information (PHI) (Node.js, Vue.js, PostgreSQL).
-- Drove the organisation-wide Vue.js component library (internal npm registry), adopted by all 6 frontend teams of 4 to 10 engineers.
-- Migrated 5 production apps from Meteor to Vue.js (load time from 30 to 5 seconds); set up TDD, CI (Drone) and A/B testing.
+- Led the 8-person frontend team for the customer product: patient and doctor apps with test results and reports, and the checkout, all handling Protected Health Information (PHI).
+- Drove the company-wide Vue.js component library (internal npm), used by all 6 frontend teams of 4–10 engineers.
+- Migrated 5 production apps from Meteor to Vue.js (load time 30 s to 5 s); set up TDD, CI (Drone) and A/B testing.
 
 ### Senior Software Engineer — Payfully
 
@@ -84,8 +84,8 @@ June 2016 – May 2017 · payfully.co - Node.js / AWS Lambda / React / React Nat
 2008 – 2015 · escuelaweb.net - Ruby on Rails / PHP / PostgreSQL / MySQL / WebRTC / AWS S3 / JavaScript
 
 - Grew from developer to Technical Lead; led a 6-person team (2 designers, 4 developers) that built the learning platform from scratch for 3,500+ students: reservations, instructor payments, PDF certificates, recorded classes, assignments and exams (Ruby on Rails, AWS S3).
-- Built live online classes on WebRTC in 2014 with chat, note-taking and file sharing; designed its PostgreSQL schemas and migrations.
-- Delivered PHP, Ruby on Rails and WordPress projects on MySQL for consulting clients, including the high-traffic news site lapatilla.com; taught web development for 6 years and mentored engineers into international careers.
+- Built live classes on WebRTC in 2014 (chat, note-taking, file sharing); designed its PostgreSQL schemas and migrations.
+- Delivered PHP, Rails and WordPress projects for consulting clients, including the high-traffic news site lapatilla.com; taught web development for 6 years and mentored engineers into international careers.
 
 ## Education
 
