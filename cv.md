@@ -10,7 +10,7 @@ Web version: https://highercomve.github.io/
 
 ## Professional Summary
 
-Senior software engineer with 18 years turning complex distributed systems into reliable products, from Linux edge devices to Kubernetes clouds. Top individual contributor to Pantacor's open-source over-the-air update platform, used in production by large manufacturers whose engineering teams I work with directly.
+Senior software engineer with 18 years turning complex distributed systems into reliable products, from Linux edge devices to Kubernetes clouds. Top individual contributor to Pantacor's open-source over-the-air update platform, used in production by large manufacturers whose engineering teams I work with directly. Earlier, as Technical Lead, I led product and frontend teams of 6 to 8 at uBiome and Escuelaweb.
 
 Most recently I architected and built Pantacor's remote build platform — builder, runners, API and MCP server — so AI assistants can take an app from source code to a signed image running on a device. I also run the platform in production: I'm always on call, and I built its observability (Prometheus, Grafana, OpenTelemetry), Stripe billing and code-signing PKI. On my own time I ship local-AI apps in Zig, Rust and Python with llama.cpp, whisper.cpp, RAG and LLM evals. I'm looking to bring that to teams building AI infrastructure and workflow automation.
 
@@ -61,9 +61,11 @@ Ongoing · foreachdeveloper.com - open-source studio, built with AI coding agent
 
 ### Technical Lead (from Senior Software Engineer) — uBiome
 
-June 2017 – January 2019 · ubiome.com - Product Team - Node.js / Vue.js / PostgreSQL / CI / A/B testing
+June 2017 – January 2019 · ubiome.com - Product Engineering - Node.js / Vue.js / PostgreSQL / PHI / CI / A/B testing
 
-- Built the patient and doctor applications (Node.js, Vue.js, PostgreSQL); as Technical Lead, migrated 5 production applications from Meteor to Vue.js, cut load time from 30 seconds to 5 seconds, and set up TDD, CI (Drone), shared component libraries and A/B testing.
+- Led the 8-person frontend team for the customer product: patient and doctor apps with test results and reports, and the checkout, all handling Protected Health Information (PHI) (Node.js, Vue.js, PostgreSQL).
+- Drove the organisation-wide Vue.js component library (internal npm registry), adopted by all 6 frontend teams of 4 to 10 engineers.
+- Migrated 5 production apps from Meteor to Vue.js (load time from 30 to 5 seconds); set up TDD, CI (Drone) and A/B testing.
 
 ### Senior Software Engineer — Payfully
 
@@ -79,9 +81,10 @@ June 2016 – May 2017 · payfully.co - Node.js / AWS Lambda / React / React Nat
 
 ### Technical Lead & Instructor (from Software Developer) — Escuelaweb
 
-2008 – 2015 · escuelaweb.net - PHP / Ruby on Rails / PostgreSQL / MySQL / AWS S3 / JavaScript
+2008 – 2015 · escuelaweb.net - Ruby on Rails / PHP / PostgreSQL / MySQL / WebRTC / AWS S3 / JavaScript
 
-- Grew from developer to Technical Lead, owning all systems, infrastructure (AWS S3) and integrations for an online learning platform with live video classes; designed its PostgreSQL schemas and ActiveRecord migrations.
+- Grew from developer to Technical Lead; led a 6-person team (2 designers, 4 developers) that built the learning platform from scratch for 3,500+ students: reservations, instructor payments, PDF certificates, recorded classes, assignments and exams (Ruby on Rails, AWS S3).
+- Built live online classes on WebRTC in 2014 with chat, note-taking and file sharing; designed its PostgreSQL schemas and migrations.
 - Delivered PHP, Ruby on Rails and WordPress projects on MySQL for consulting clients, including the high-traffic news site lapatilla.com; taught web development for 6 years and mentored engineers into international careers.
 
 ## Education
