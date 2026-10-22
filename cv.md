@@ -17,7 +17,7 @@ Most recently I architected and built Pantacor's remote build platform — build
 ## Highlights
 
 - **Build platform, from the ground up** — builder service, sandboxed runners, API and MCP tools that turn source code into signed, multi-arch device images
-- **AI workflow automation** — MCP server (34 tools) with its own OAuth 2.1 authorization server, plus an Agent Skill that lets AI assistants build and deploy device apps
+- **AI workflow automation** — Created an MCP server with 34 tools, its own OAuth 2.1 authorization server, and an Agent Skill enabling AI assistants to build and deploy device apps.
 - **15,000+ devices** — one customer fleet runs on Pantacor Fleet, which I architected and have built almost single-handedly since 2020
 - **3,500+ commits** across the Pantacor platform since 2019, and always on call for it in production
 
@@ -77,7 +77,7 @@ June 2016 – May 2017 · payfully.co - Node.js / AWS Lambda / React / React Nat
 
 2015 – 2016 · retiqueta.com - Ruby on Rails / MySQL / Ionic / Docker / Kubernetes
 
-- Built the Ionic mobile app and Ruby on Rails API (MySQL) for a second-hand fashion marketplace, on Docker and Kubernetes (Google Container Engine) with CI and end-to-end tests.
+- Developed the Ionic mobile app and Ruby on Rails API (MySQL) for a second-hand fashion marketplace using Docker and Kubernetes (Google Container Engine) with CI and end-to-end tests.
 
 ### Technical Lead & Instructor (from Software Developer) — Escuelaweb
 
@@ -85,7 +85,7 @@ June 2016 – May 2017 · payfully.co - Node.js / AWS Lambda / React / React Nat
 
 - Grew from developer to Technical Lead; led a 6-person team (2 designers, 4 developers) that built the learning platform from scratch for 3,500+ students: reservations, instructor payments, PDF certificates, recorded classes, assignments and exams (Ruby on Rails, AWS S3).
 - Built live classes on WebRTC in 2014 (chat, note-taking, file sharing); designed its PostgreSQL schemas and migrations.
-- Delivered PHP, Rails and WordPress projects for consulting clients, including the high-traffic news site lapatilla.com; taught web development for 6 years and mentored engineers into international careers.
+- Delivered PHP, Rails, and WordPress projects for consulting clients, including the high-traffic news site lapatilla.com, and taught web development for 6 years while mentoring engineers into international careers.
 
 ## Education
 
