@@ -65,7 +65,7 @@ June 2017 – January 2019 · ubiome.com - Product Engineering - Node.js / Vue.j
 
 - Led the 8-person frontend team for the customer product: patient and doctor apps with test results and reports, and the checkout, all handling Protected Health Information (PHI).
 - Drove the company-wide Vue.js component library (internal npm), used by all 6 frontend teams of 4–10 engineers.
-- Cut load time from 30 s to 5 s by migrating 5 production apps from Meteor to Vue.js; set up TDD, CI (Drone) and A/B testing.
+- Cut page load from 30 s to 5 s with a performance study that reduced page size; set up TDD, CI (Drone) and A/B testing.
 
 ### Senior Software Engineer — Payfully
 
