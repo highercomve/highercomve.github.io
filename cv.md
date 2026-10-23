@@ -16,8 +16,8 @@ Most recently I architected and built Pantacor's remote build platform — build
 
 ## Highlights
 
-- **Build platform, from the ground up** — builder service, sandboxed runners, API and MCP tools that turn source code into signed, multi-arch device images
-- **AI workflow automation** — MCP server (34 tools) with its own OAuth 2.1 authorization server, plus an Agent Skill that lets AI assistants build and deploy device apps
+- **Build platform, from the ground up** — builder service, sandboxed runners, API and MCP tools that transform source code into signed, multi-arch device images
+- **AI workflow automation** — MCP server (34 tools) with its own OAuth 2.1 authorization server, and an Agent Skill that enables AI assistants to build and deploy device apps.
 - **15,000+ devices** — one customer fleet runs on Pantacor Fleet, which I architected and have built almost single-handedly since 2020
 - **3,500+ commits** across the Pantacor platform since 2019, and always on call for it in production
 
@@ -49,14 +49,14 @@ March 2019 – Present · pantacor.com - Go / Kubernetes / MongoDB / Kafka / MQT
 - Lead the hosted platform's bare-metal Kubernetes infrastructure (Scaleway, Hetzner; Helm, Kafka, AWS S3), always on call for it. Built its observability stack (Prometheus, Grafana, OpenTelemetry/Jaeger, EFK) and its webhooks service: an at-least-once, idempotent pipeline on Kafka Connect/Debezium CDC with a transactional outbox, dead-letter queue, replay and HMAC-signed delivery.
 - Built the subscription billing service on Stripe (Go, MongoDB): prorations, invoices, webhooks and the billing UI.
 - Led a 12-person cross-company team (2 at Pantacor, 8 at the customer, 2 at its manufacturing partner) integrating a large global manufacturer onto Pantacor Fleet, 15,000+ devices shipped worldwide in its first product generation: a dedicated cluster, coordinated OTA updates across the two computers in each device, and user-accepted updates.
-- Core maintainer of the web dashboard (React 19, Vite; 800+ commits), pvr (Go CLI, 500+ commits), pvflasher (2.7x faster than the balenaEtcher engine), pvwificonnect (D-Bus, BLE), pantavisor-mocker (Zig) and container-ci (used by 12+ projects).
+- Core maintainer of the web dashboard (React 19, Vite; 800+ commits), pvr (Go CLI, 500+ commits), pvflasher (2.7x faster than the balenaEtcher engine), pvwificonnect (D-Bus, BLE), pantavisor-mocker (Zig), and container-ci (used by 12+ projects).
 
 ### Founder & Engineer — forEach developer
 
 Ongoing · foreachdeveloper.com - open-source studio, built with AI coding agents (Claude Code, Codex) - Zig / Rust / Python / TypeScript / llama.cpp / whisper.cpp / MCP
 
 - Built Oriel, an open-source Zig framework for desktop and mobile apps with built-in local AI (llama.cpp, whisper.cpp, Kokoro TTS, sqlite-vec); 63 releases.
-- Shipped GhostReel (Rust): local video search and AI editing with Whisper, vision-language models, hybrid full-text + vector search, an LLM-as-judge with replay evals and a 19-tool MCP server; 29 releases.
+- Shipped GhostReel (Rust): local video search and AI editing using Whisper, vision-language models, hybrid full-text + vector search, an LLM-as-judge with replay evals, and a 19-tool MCP server; 29 releases.
 - Shipped GhostPen (offline AI writing, dictation and meeting transcription; 28 releases) and highllama (Python): local LLM serving with a contamination-free coding benchmark (pass@1 across 8 languages).
 
 ### Technical Lead (from Senior Software Engineer) — uBiome
@@ -65,7 +65,7 @@ June 2017 – January 2019 · ubiome.com - Product Engineering - Node.js / Vue.j
 
 - Led the 8-person frontend team for the customer product: patient and doctor apps with test results and reports, and the checkout, all handling Protected Health Information (PHI).
 - Drove the company-wide Vue.js component library (internal npm), used by all 6 frontend teams of 4–10 engineers.
-- Migrated 5 production apps from Meteor to Vue.js (load time 30 s to 5 s); set up TDD, CI (Drone) and A/B testing.
+- Migrated 5 production apps from Meteor to Vue.js, reducing load time from 30 s to 5 s, and set up TDD, CI (Drone), and A/B testing.
 
 ### Senior Software Engineer — Payfully
 
@@ -85,7 +85,7 @@ June 2016 – May 2017 · payfully.co - Node.js / AWS Lambda / React / React Nat
 
 - Grew from developer to Technical Lead; led a 6-person team (2 designers, 4 developers) that built the learning platform from scratch for 3,500+ students: reservations, instructor payments, PDF certificates, recorded classes, assignments and exams (Ruby on Rails, AWS S3).
 - Built live classes on WebRTC in 2014 (chat, note-taking, file sharing); designed its PostgreSQL schemas and migrations.
-- Delivered PHP, Rails and WordPress projects for consulting clients, including the high-traffic news site lapatilla.com; taught web development for 6 years and mentored engineers into international careers.
+- Delivered PHP, Rails, and WordPress projects for consulting clients, including the high-traffic news site lapatilla.com; taught web development for 6 years and mentored engineers into international careers.
 
 ## Education
 
