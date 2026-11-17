@@ -866,6 +866,7 @@ p {
 	gap: 1.5em;
 }
 .cv-extras .talks,
+.cv-extras .projects,
 .cv-extras .foreach {
 	grid-column: 1 / -1;
 }
@@ -922,6 +923,39 @@ p {
 }
 .foreach .content-section__title::before {
 	content: "\f121";
+}
+/* Selected open-source projects: the forEach developer entry of
+   experience.json, kept out of the employment timeline (same markup as
+   cvrank's printed CV). */
+.projects .content-section__title::before {
+	content: "\f126";
+}
+.projects .projects__org {
+	margin: 0 0 0.2em;
+	font-family: var(--font-open-sans);
+	font-weight: 400;
+}
+.projects .projects__meta {
+	margin: 0 0 0.6em;
+	font-size: 0.9em;
+	color: var(--color-muted);
+}
+.projects .projects__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.projects .projects__list li {
+	position: relative;
+	margin: 0.5em 0;
+	padding-left: 1.3em;
+	line-height: 1.55;
+}
+.projects .projects__list li::before {
+	content: "\25B9";
+	position: absolute;
+	left: 0;
+	color: var(--color-blue);
 }
 .foreach .content-section__content p {
 	margin: 0.4em 0;
@@ -1077,9 +1111,20 @@ p {
 	}
 
 	.languages .content-section__content li,
-	.talks .content-section__content li {
+	.talks .content-section__content li,
+	.projects .projects__list li {
 		margin: 0.4em 0 !important;
 		font-size: 0.92em;
+	}
+
+	.projects .projects__list li {
+		break-inside: avoid;
+		page-break-inside: avoid;
+	}
+
+	.projects .projects__meta {
+		color: #444 !important;
+		font-size: 0.85em;
 	}
 
 	.education .content-section__content p:last-child {

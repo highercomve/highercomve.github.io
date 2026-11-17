@@ -51,14 +51,6 @@ March 2019 – Present · pantacor.com - Go / Kubernetes / MongoDB / Kafka / MQT
 - Led a 12-person cross-company team (2 at Pantacor, 8 at the customer, 2 at its manufacturing partner) integrating a large global manufacturer onto Pantacor Fleet, 15,000+ devices shipped worldwide in its first product generation: a dedicated cluster, coordinated OTA updates across the two computers in each device, and user-accepted updates.
 - Core maintainer of the web dashboard (React 19, Vite; 800+ commits), pvr (Go CLI, 500+ commits), pvflasher (2.7x faster than the balenaEtcher engine), pvwificonnect (D-Bus, BLE), pantavisor-mocker (Zig), and container-ci (used by 12+ projects).
 
-### Founder & Engineer — forEach developer
-
-Ongoing · foreachdeveloper.com - open-source studio, built with AI coding agents (Claude Code, Codex) - Zig / Rust / Python / TypeScript / llama.cpp / whisper.cpp / MCP
-
-- Built Oriel, an open-source Zig framework for desktop and mobile apps with built-in local AI (llama.cpp, whisper.cpp, Kokoro TTS, sqlite-vec); 63 releases.
-- Shipped GhostReel (Rust): local video search and AI editing using Whisper, vision-language models, hybrid full-text + vector search, an LLM-as-judge with replay evals, and a 19-tool MCP server; 29 releases.
-- Shipped GhostPen (offline AI writing, dictation and meeting transcription; 28 releases) and highllama (Python): local LLM serving with a contamination-free coding benchmark (pass@1 across 8 languages).
-
 ### Technical Lead (from Senior Software Engineer) — uBiome
 
 June 2017 – January 2019 · ubiome.com - Product Engineering - Node.js / Vue.js / PostgreSQL / PHI / CI / A/B testing
@@ -86,6 +78,16 @@ June 2016 – May 2017 · payfully.co - Node.js / AWS Lambda / React / React Nat
 - Grew from developer to Technical Lead; led a 6-person team (2 designers, 4 developers) that built the learning platform from scratch for 3,500+ students: reservations, instructor payments, PDF certificates, recorded classes, assignments and exams (Ruby on Rails, AWS S3).
 - Built live classes on WebRTC in 2014 (chat, note-taking, file sharing); designed its PostgreSQL schemas and migrations.
 - Delivered PHP, Rails, and WordPress projects for consulting clients, including the high-traffic news site lapatilla.com; taught web development for 6 years and mentored engineers into international careers.
+
+## Selected open-source projects
+
+**forEach developer** — personal open-source
+
+*foreachdeveloper.com - open-source studio, built with AI coding agents (Claude Code, Codex) - Zig / Rust / Python / TypeScript / llama.cpp / whisper.cpp / MCP*
+
+- Built Oriel, an open-source Zig framework for desktop and mobile apps with built-in local AI (llama.cpp, whisper.cpp, Kokoro TTS, sqlite-vec); 63 releases.
+- Shipped GhostReel (Rust): local video search and AI editing using Whisper, vision-language models, hybrid full-text + vector search, an LLM-as-judge with replay evals, and a 19-tool MCP server; 29 releases.
+- Shipped GhostPen (offline AI writing, dictation and meeting transcription; 28 releases) and highllama (Python): local LLM serving with a contamination-free coding benchmark (pass@1 across 8 languages).
 
 ## Education
 

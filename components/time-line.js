@@ -1,5 +1,12 @@
 import { getGist } from "../js/utils.js";
 
+// The forEach developer entry in experience.json holds personal open-source
+// projects, not employment: keep it out of the timeline and show it in its own
+// card instead (mirrors cvrank's site.py _is_project, and build-cv.py).
+function isProject(job = {}) {
+	return (job.title || "").includes("forEach developer");
+}
+
 window.addEventListener("WebComponentsReady", function () {
 	var Component = {
 		timeline: [],
@@ -10,8 +17,9 @@ window.addEventListener("WebComponentsReady", function () {
 		},
 		connectedCallback() {
 			getGist(this.gist, (response) => {
-				this.timeline =
+				var items =
 					JSON.parse(response.files["experience.json"].content).items || [];
+				this.timeline = items.filter((job) => !isProject(job));
 				this.updateComponent();
 			});
 		},
@@ -47,7 +55,49 @@ window.addEventListener("WebComponentsReady", function () {
 			},
 		},
 	};
+
+	// Body of the full-width "projects" card in .cv-extras.
+	var Projects = {
+		projects: [],
+		gist: {
+			get() {
+				return this.getAttribute("gist");
+			},
+		},
+		connectedCallback() {
+			getGist(this.gist, (response) => {
+				var items =
+					JSON.parse(response.files["experience.json"].content).items || [];
+				this.projects = items.filter(isProject);
+				this.updateComponent();
+			});
+		},
+		render() {
+			if (!this.projects.length) {
+				return "";
+			}
+			return `
+        <section class="content-section">
+          <h1 class="content-section__title">Selected open-source projects</h1>
+          <section class="content-section__content">
+            <p class="projects__org"><strong>forEach developer</strong> — personal open-source</p>
+            ${this.projects
+							.map(
+								(job) => `
+              <p class="projects__meta"><em>${job.subtitle}</em></p>
+              <ul class="projects__list">
+                ${job.description.map((d) => `<li>${d}</li>`).join("")}
+              </ul>`,
+							)
+							.join("")}
+          </section>
+        </section>
+      `;
+		},
+	};
+
 	import("../components/component-builder.js").then(function () {
 		CreateComponent("time-line", Component);
+		CreateComponent("open-source-projects", Projects);
 	});
 });

@@ -31,6 +31,16 @@ def load():
     return content, jobs
 
 
+PROJECTS_ORG = "forEach developer"
+PROJECTS_TITLE = "Selected open-source projects"
+
+
+def is_project(job):
+    """The forEach developer entry lists personal open-source projects, not
+    employment: it's rendered as its own section (mirrors cvrank's site.py)."""
+    return PROJECTS_ORG in job["title"]
+
+
 def split_job(job):
     """'Senior Software Engineer - Pantacor' -> ('Senior ...', 'Pantacor')."""
     role, _, company = job["title"].rpartition(" - ")
@@ -85,10 +95,19 @@ def render_html(content, jobs):
     out.append(f'<p>{esc(", ".join(content["skils"]["content"]))}</p>')
     out.append("<h2>Professional Experience</h2>")
     for job in jobs:
+        if is_project(job):
+            continue
         role, company = split_job(job)
         out.append(f"<h3>{esc(role)} — {esc(company)}</h3>")
         out.append(f'<p>{esc(dates(job))} · {esc(job["subtitle"])}</p>')
         out.append("<ul>" + "".join(f"<li>{esc(d)}</li>" for d in job["description"]) + "</ul>")
+    projects = [job for job in jobs if is_project(job)]
+    if projects:
+        out.append(f"<h2>{PROJECTS_TITLE}</h2>")
+        out.append(f"<p><strong>{PROJECTS_ORG}</strong> — personal open-source</p>")
+        for job in projects:
+            out.append(f'<p><em>{esc(job["subtitle"])}</em></p>')
+            out.append("<ul>" + "".join(f"<li>{esc(d)}</li>" for d in job["description"]) + "</ul>")
     section("education")
     section("languages")
     section("talks")
@@ -123,9 +142,17 @@ def render_markdown(content, jobs):
     out.extend(["", "## Technical Skills", "", ", ".join(content["skils"]["content"])])
     out.extend(["", "## Professional Experience"])
     for job in jobs:
+        if is_project(job):
+            continue
         role, company = split_job(job)
         out.extend(["", f"### {role} — {company}", "", f'{dates(job)} · {job["subtitle"]}', ""])
         out.extend(f"- {d}" for d in job["description"])
+    projects = [job for job in jobs if is_project(job)]
+    if projects:
+        out.extend(["", f"## {PROJECTS_TITLE}", "", f"**{PROJECTS_ORG}** — personal open-source"])
+        for job in projects:
+            out.extend(["", f'*{job["subtitle"]}*', ""])
+            out.extend(f"- {d}" for d in job["description"])
     section("education")
     section("languages")
     section("talks")

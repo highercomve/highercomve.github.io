@@ -63,6 +63,9 @@ window.addEventListener("WebComponentsReady", function () {
 			</div>
 			<time-line gist="${this.gist}"></time-line>
 			<section class="cv-extras">
+				<section class="cv-block cv-card projects">
+					<open-source-projects gist="${this.gist}"></open-source-projects>
+				</section>
 				<section class="cv-block cv-card education">
 					<content-section title="Education" wrapper="p" content="${education}"></content-section>
 				</section>
