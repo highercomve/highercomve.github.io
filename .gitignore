@@ -4,3 +4,4 @@ dist
 .DS_Store
 gist-files/
 .playwright-mcp/
+.claude/
